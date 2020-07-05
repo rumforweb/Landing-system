@@ -1,0 +1,179 @@
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 999;
+}
+.form_content {
+    width: 310px;
+}
+.form_name {
+    font-size: 22px;
+    color: $yellow;
+    text-transform: uppercase;
+    text-align: center;
+}
+.form_input {
+    box-shadow: 0 0 0 1px $white;
+    border-radius: 3px;
+    input[type=email], input[type=password] {
+        width: 100%;
+        background: transparent;
+        color: $grey;
+        font-size: 18px;
+        text-transform: uppercase;
+        border: none;
+        padding: 15px 10px;
+        &:focus {
+            outline: none;
+        }
+    }
+    input[type=email]::placeholder, input[type=password]::placeholder {
+        color: $grey;
+    }
+}
+.form_input {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    img {
+        padding: 10px;
+    }
+    @include phone-sm {
+        margin: 15px;
+    }
+}
+.form_error {
+    margin: 0;
+    .error_message {
+        color: $pink;
+        display: block;
+    }
+}
+.form_selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0 15px;
+    .form_selection-title {
+        color: $grey;
+        text-transform: uppercase;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            padding: 13px;
+            border-radius: 1px;
+            cursor: pointer;
+            @include phone-xs {
+                padding: 10px;
+            }
+            span {
+                font-size: 16px;
+                color: $white;
+            }
+        }
+    }
+}
+.form_checking {
+    margin: 0;
+    @include phone-sm {
+        margin: 0 15px;
+    }
+}
+.form_terms-wrap {
+    display: flex;
+}
+.form_terms {
+    input[type=checkbox]  {
+        display: none;
+    }
+    label::before {
+        content: '';
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 3px;
+        -moz-box-shadow: 0px 0px 0px 1px $yellow;
+        -o-box-shadow: 0px 0px 0px 1px $yellow;
+        -webkit-box-shadow: 0px 0px 0px 1px $yellow;
+        box-shadow: 0px 0px 0px 1px $yellow;
+    }
+    input[type=checkbox]:checked + label::before {
+        cursor: pointer;
+        background: url(./img/icons/check.svg) no-repeat;
+        background-position: 50% 50%;
+        -moz-box-shadow: 0px 0px 0px 1px $yellow;
+        -o-box-shadow: 0px 0px 0px 1px $yellow;
+        -webkit-box-shadow: 0px 0px 0px 1px $yellow;
+        box-shadow: 0px 0px 0px 1px $yellow;
+    }
+}
+.form_checkbox-text {
+    padding: 0 0 0 13px;
+    width: 100%;
+    margin: 0;
+    text-align: initial;
+    line-height: 1;
+    @include phone-xs {
+        font-size: 10px;
+        line-height: 1;
+    }
+    span {
+        font-size: 9px;
+        font-family: 'Montserrat', sans-serif;
+        color: $white;
+        @include phone-xs {
+            font-size: 7px;
+            line-height: 0.7;
+        }
+        a {
+            color: $yellow;
+        }
+    }
+    .form_mark {
+        color: $yellow;
+    }
+}
+.error_message {
+    margin: 10px 0;
+    color: $pink;
+    @include phone-md {
+        margin: 10px 18px;
+        font-size: 14px;
+    }
+}              
+.btn { 
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    a {
+        cursor: pointer;
+    }
+    @include phone-xs {
+        margin: 0;
+    }
+    .form_btn {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 15px 20px;
+        display: block;
+        color: $black;
+        background: $yellow;
+        border-radius: 3px;
+        width: 100%;
+        text-align: center;
+        -webkit-appearance: none;
+        box-shadow: 0px 0px 39px #15182180;
+    }
+}
+.cb-active {
+    box-shadow: 0 0 0 1px $yellow;
+    color: $yellow;
+    border-radius: 2px;
+}   

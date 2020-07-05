@@ -1,0 +1,128 @@
+// colors
+$ye: #FCEE21;
+$bl: #0730C4;
+$b: #000;
+$w: #fff;
+$o: #000000c5;
+$grey: #b5b5b5;
+
+
+// media
+@mixin phone-xs {
+    @media (max-width: 320px) { @content; }
+}
+@mixin phone-sm {
+    @media (max-width: 375px) { @content; }
+}
+@mixin phone-md {
+    @media (max-width: 470px) { @content; }
+}
+@mixin phone-xl {
+    @media (max-width: 640px) { @content; }
+}
+@mixin pad-xs {
+    @media (max-width: 768px) { @content; }
+}
+@mixin pad-md {
+    @media (max-width: 966px) { @content; }
+}
+
+body {
+    background: url(./img/main.jpg) no-repeat;
+    background-size: cover;
+    background-position: 30%;
+    height: 100vh;
+    margin: 0;
+    @include pad-md {
+        background-position: 36%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.tagline {
+    color: $w;
+    font-size: 60px;
+    text-transform: uppercase;
+    width: 620px;
+    text-align: center;
+    @include pad-md {
+        font-size: 45px;
+    }
+    @include pad-xs {
+        font-size: 38px;
+        width: 398px;
+    }
+    @include phone-sm {
+        font-size: 29px;
+        width: 318px;
+    }
+}
+.logo {
+    position: relative;
+    top: 6%;
+}
+.go {
+    position: relative;
+    bottom: 2%;
+    a {
+        display: inline-block;
+        background: $ye;
+        color: $b;
+        font-size: 26px;
+        text-decoration: none;
+        padding: 16px 35px;
+        border-radius: 9px;
+        text-transform: uppercase;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6);
+        @include pad-xs {
+            font-size: 21px;
+        }
+    }
+}
+.trast {
+    width: 950px;
+    @include pad-md {
+        width: 470px;
+    }
+    @include phone-md {
+        width: 300px;
+    }
+}
+.trast_container {
+    border-bottom: 1px solid $w;
+    .cp {
+        color: $w;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+}
+.accept {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    img {
+        height: 25px;
+        padding: 10px;
+        @include pad-md {
+            height: 20px;
+        }
+    }
+}
+.info {
+    color: $grey;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 40px;
+    max-width: 400px;
+    margin: 0 auto;
+}

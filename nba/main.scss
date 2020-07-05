@@ -1,0 +1,358 @@
+// resset 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline ;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block ;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+    content: none;
+}
+table {
+	border-collapse: collapse;
+    border-spacing: 0 ;
+}
+
+// colors
+$white: #fff;
+$grey: #8e8e8e;
+$yellow: #FDEE21;
+$black: #000;
+$red: #fe393f;
+$baby: #FF0098;
+
+
+// media query mix
+@mixin desc {
+    @media (max-width: 1366px) { @content; }
+}
+@mixin pad {
+    @media (max-width: 1024px) { @content; }
+}
+@mixin phone {
+    @media (max-width: 520px) { @content; }
+}
+@mixin phone-old {
+    @media (max-width: 320px) { @content; }
+}
+
+
+// styles SCSS
+body {
+    background: url(./img/main.jpg) no-repeat;
+    background-size: cover;
+    background-position: 0% 30%;
+    height: 100vh;
+    @include pad {
+        height: auto;
+    }
+header {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1420px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px 15px;
+    text-align: center;
+    @include pad {
+        flex-direction: column;
+        h1, .logo, .game_logo {
+           padding: 20px;
+           justify-content: center;
+        }
+    }
+    h1 {
+        color: $white;
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+    .logo {
+        min-width: 300px;
+        padding: 0 10px;
+    }
+    .game_logo {
+        padding: 0 10px;
+    }
+}
+aside {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: flex-end;
+    max-width: 1420px;
+    margin: 0 auto;
+    .nba_man {
+        color: $yellow;
+        font-family: 'Montserrat', sans-serif;
+        position: relative;
+        p {
+            font-size: 35px;
+            text-transform: uppercase;
+            background: $black;
+            padding: 15px 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: right;
+            &::before {
+                content: '';
+                background: url(./img/player.png) no-repeat;
+                width: 146px;
+                height: 139px;
+                position: absolute;
+                top: -25px;
+                left: -32%;
+                right: auto;
+            }
+            @include desc {
+                font-size: 26px;
+            }
+            @include pad {
+                font-size: 25px;
+                padding: 20px;
+                &::before {
+                    left: -40%;
+                }
+            }
+            @include phone-old {
+                font-size: 19px;
+            }
+        }
+    }
+    @include pad {
+        justify-content: safe;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+}
+section {
+    max-width: 1420px;
+    margin: 0 auto;
+    form {
+        max-width: 460px;
+        background: rgba(0, 0, 0, 0.06);
+        backdrop-filter: blur(40px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Montserrat', sans-serif;
+        z-index: 999;
+        @include pad {
+            margin: 0 auto;
+        }
+        @include phone-old {
+            max-width: 280px;
+        }
+        .form_content {
+            width: 350px;
+            @include phone-old {
+                max-width: 250px;
+            }
+            .form_name {
+                font-size: 24px;
+                color: $yellow;
+                text-transform: uppercase;
+                padding: 20px;
+                text-align: center;
+            }
+            .form_input {
+                box-shadow: 0 0 0 1px $white;
+                border-radius: 3px;
+                input[type=email], input[type=password] {
+                    width: 100%;
+                    background: transparent;
+                    color: $yellow;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    border: none;
+                    padding: 15px 10px;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                input[type=email]::placeholder {
+                    color: $grey;
+                }
+            }
+            .form_input {
+                display: flex;
+                align-items: center;
+                img {
+                    padding: 10px;
+                }
+            }
+            .form_error {
+                margin: 10px 0;
+                .error_message {
+                    color: $red;
+                    display: block;
+                }
+            }
+            .form_selection {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                .form_selection-title {
+                    color: $white;
+                    text-transform: uppercase;
+                }
+                ul {
+                    display: flex;
+                    li {
+                        padding: 13px;
+                        border-radius: 3px;
+                        cursor: pointer;
+                        span {
+                            font-size: 16px;
+                            color: $yellow;
+                        }
+                    }
+                }
+            }
+            .form_checking {
+                margin: 10px 0;
+                .wrap {
+                    .form_terms-wrap {
+                        display: flex;
+                        align-items: center;
+                        .form_terms {
+                            input[type=checkbox]  {
+                                display: none;
+                            }
+                            label::before {
+                                content: '';
+                                display: inline-block;
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 3px;
+                                -moz-box-shadow: 0px 0px 0px 1px $yellow;
+                                -o-box-shadow: 0px 0px 0px 1px $yellow;
+                                -webkit-box-shadow: 0px 0px 0px 1px $yellow;
+                                box-shadow: 0px 0px 0px 1px $yellow;
+                            }
+                            input[type=checkbox]:checked + label::before {
+                                cursor: pointer;
+                                background: url(./icons/check.svg) no-repeat;
+                                background-position: 50% 50%;
+                                -moz-box-shadow: 0px 0px 0px 1px $yellow;
+                                -o-box-shadow: 0px 0px 0px 1px $yellow;
+                                -webkit-box-shadow: 0px 0px 0px 1px $yellow;
+                                box-shadow: 0px 0px 0px 1px $yellow;
+                            }
+                        }
+                        .form_checkbox-text {
+                            padding: 0 0 0 13px;
+                            width: 100%;
+                            span {
+                                font-size: 12px;
+                                font-family: 'Montserrat', sans-serif;
+                                color: $white;
+                                a {
+                                    color: $yellow;
+                                }
+                            }
+                            .form_mark {
+                                color: $yellow;
+                            }
+                        }
+                    }
+                    .error_message {
+                        margin: 10px 0;
+                        color: $red;
+                    }
+                }
+                .btn { 
+                    display: flex;
+                    justify-content: center;
+                    margin: 30px 0;
+                    .form_btn {
+                        font-size: 24px;
+                        text-transform: uppercase;
+                        padding: 10px 20px;
+                        display: block;
+                        color: $black;
+                        background: $yellow;
+                        border-radius: 3px;
+                        width: 100%;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                    }
+                }
+            }
+        }
+        .cb-active {
+            box-shadow: 0 0 0 1px $yellow;
+            color: $yellow;
+            border-radius: 2px;
+        }
+    }
+    .steps {
+        display: flex;
+        flex-wrap: wrap;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        justify-content: space-between;
+        max-width: 1140px;
+        margin: 0 auto;
+        font-weight: bold;
+        .step {
+            color: $white;
+            padding: 0 10px;
+            font-size: 16px;
+            span {
+                color: $baby;
+                font-size: 18px;
+                @include pad {
+                    font-size: 14px;
+                }
+                b {
+                    color: $yellow;
+                }
+            }
+        }
+        @include pad {
+            max-width: 350px;
+        }
+        @include phone-old() {
+            max-width: 260px;
+        }
+    }
+}
+footer {
+    max-width: 1140px;
+    margin: 20px auto;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 10px;
+    .copyright {
+        color: $grey;
+        font-size: 12px;
+        @include phone {
+            text-align: justify;
+        }
+    }
+    @include desc {
+        max-width: 1140px;
+        padding: 0 10px;
+    }
+    @include pad {
+        max-width: 350px;
+        margin: 20px auto;
+    }
+}
+}

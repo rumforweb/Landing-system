@@ -1,0 +1,231 @@
+// colors
+$ye: #FCEE21;
+$bl: #0730C4;
+$b: #000;
+$w: #fff;
+$o: #000000c5;
+
+
+// media
+@mixin phone-xs {
+    @media (max-width: 320px) { @content; }
+}
+@mixin phone-sm {
+    @media (max-width: 375px) { @content; }
+}
+@mixin phone-md {
+    @media (max-width: 425px) { @content; }
+}
+@mixin phone-xl {
+    @media (max-width: 640px) { @content; }
+}
+@mixin pad-xs {
+    @media (max-width: 768px) { @content; }
+}
+@mixin pad-md {
+    @media (max-width: 1024px) { @content; }
+}
+@mixin desctop-xs {
+    @media (max-width: 1366px) { @content; }
+}
+@mixin desctop-md {
+    @media (max-width: 1680px) { @content; }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('/img/main.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    @include desctop-xs {
+        height: 100%;
+    }
+}
+
+.container {
+    max-width: 1640px;
+    margin: 0 auto;
+    @include desctop-md {
+        max-width: 1360px;
+        margin: 0 auto;
+    }
+    @include phone-md {
+        max-width: 425px;
+        margin: 0 auto;
+    }
+
+    @include phone-xs {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 10px 0 0 0;
+    @include pad-xs {
+        padding: 15px 0 0 0;
+    }
+    h1 {
+        color: $w;
+        font-size: 21px;
+        @include phone-xl {
+            font-size: 21px;
+        }
+    }
+}
+
+section {
+    .card_wrap {
+        display: flex;
+        @include pad-xs {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            display: flex;
+            width: 50%;
+            flex-direction: row;
+            padding: 0 17px;
+            @include pad-xs {
+                    width: 100%;
+            }
+            .card_img {
+                border-radius: 43px;
+                font-size: 0;
+                padding: 10px;
+                height: 70px;
+                background: radial-gradient(50% 50% at 50% 50%, #000000 31.61%, #0730C4 80.73%, #FF2A4D 100%);
+                @include pad-md {
+                    height: 50px;
+                    img {
+                        height: 50px;
+                    }
+                }
+            }
+        }
+        .card_last {
+            @include phone-md {
+                height: 360px;
+            }
+            @include phone-sm {
+                height: 410px;
+            }
+            @include phone-xs {
+                height: 460px;
+            }
+        }
+        .card_t {
+            padding: 0px 15px;
+            .card_t_name {
+                color: $ye;
+                font-size: 16px;
+                padding: 5px 20px;
+                margin: 8px 0;
+                background: $bl;
+                display: inline-block;
+            }
+            .card_t_read {
+                color: $ye;
+                font-size: 14px;
+                margin: 3px 0 0 0;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: $bl;
+                    filter: blur(12px);
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 10px;
+        @include pad-xs {
+            background: $bl;
+            position: fixed;
+            bottom: 0;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @include phone-md {
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+        .card_info {
+            color: $w;
+            font-size: 16px;
+            font-weight: bold;
+            .sard_info_mode {
+                color: $ye;
+            }
+            @include pad-md {
+                text-align: center;
+            }
+            @include phone-md {
+                padding-bottom: 6px;
+                font-size: 14px;
+            }
+        }
+        .bottom_bonus {
+            display: flex;
+            align-items: center;
+            @include pad-md {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px 0;
+            }
+            .sard_info_money {
+                color: $ye;
+                padding: 10px;
+                margin: 0 8px;
+                font-weight: bold;
+                display: inline-block;
+                @include pad-md {
+                    padding: 0;
+                }
+            }
+        }
+        .regisrer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+            padding: 20px 15px 20px 60px;
+            color: $b;
+            background: $ye;
+            font-size: 21px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px; 
+            position: relative;
+            &::before {
+                content: '';
+                background: url('./icons/gamepad.svg') no-repeat;
+                width: 42px;
+                height: 34px;
+                position: absolute;
+                left: 14px;
+                right: auto;
+            }   
+            @include phone-md {
+                width: 100%;
+            }
+            span {
+                padding: 0 10px 0 0;
+            }    
+        }
+
+        
+    }
+}

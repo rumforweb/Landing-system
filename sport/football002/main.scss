@@ -1,0 +1,226 @@
+$yellow: #FCEE21;
+$gradient-text: linear-gradient(137deg, #DE3823 11.21%, #006D39 17.94%);
+$gradient-btn: linear-gradient(139deg, #DE3823 39.21%, #006D39 69.94%);
+$red: #EA4241;
+$grey: #CBCBCB;
+$white: #fff;
+$dark: #000;
+
+
+// media
+@mixin phone-xs {
+    @media (max-width: 320px) { @content; }
+}
+@mixin phone-sm {
+    @media (max-width: 375px) { @content; }
+}
+@mixin phone-md {
+    @media (max-width: 425px) { @content; }
+}
+@mixin phone-xl {
+    @media (max-width: 640px) { @content; }
+}
+@mixin pad-xs {
+    @media (max-width: 768px) { @content; }
+}
+@mixin pad-md {
+    @media (max-width: 1024px) { @content; }
+}
+@mixin desctop-xs {
+    @media (max-width: 1280px) { @content; }
+}
+@mixin desctop-md {
+    @media (max-width: 1440px) { @content; }
+} 
+@mixin desctop-xl {
+    @media (max-width: 1920px) { @content; }
+} 
+@mixin desctop-xxl {
+    @media (max-width: 2560px) { @content; }
+} 
+
+body {
+    background: url(./img/main.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    a {
+        text-decoration: none;
+        color: $dark;
+    }
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+    @include pad-xs {
+        background: url(./img/main_768.jpg) no-repeat;
+    }
+    @include phone-md {
+        background: url(./img/main_500.jpg) no-repeat;
+        background-size: cover;
+    }
+}
+
+section {
+    height: 100vh;
+    .content {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 100%;
+    }
+    @include desctop-xxl {
+        width: 1920px;
+        margin: 0 auto;
+    }
+    @include desctop-xl {
+        width: 1440px;
+    }
+    @include desctop-md {
+        width: 1280px;
+        padding: 0 50px;
+    }
+    @include desctop-xs {
+        width: 1170px;
+    }
+    @include pad-md {
+        width: 900px;
+    }
+    @include pad-xs {
+        width: 499px;
+    }
+    @include phone-md {
+        width: 400px;
+        padding: 0;
+        text-align: center;
+        height: auto;
+    }
+    @include phone-sm {
+        width: 290px;
+    }
+
+}
+
+.logo {
+    &__img {
+        @include phone-xs {
+            height: 38px;
+        }
+    }
+}    
+
+.promo {
+    &__title {
+        display: flex;
+        flex-direction: column;
+        font-size: 44px;
+        font-weight: 800;
+        text-transform: uppercase;
+        @include phone-md {
+            font-size: 31px;
+            margin: 40px 0;
+        }
+        @include phone-sm {
+            font-size: 25px;
+        }
+        @include phone-xs {
+            margin: 10px 0;
+        }
+    }
+    &__use {
+        color: $dark;
+    }
+    &__code {
+        background: $gradient-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &__btn {
+        margin-top: 25px;
+        font-size: 44px;
+        font-weight: 800;
+        text-transform: uppercase;
+        @include phone-md {
+            font-size: 25px;
+        }
+        @include phone-sm {
+            font-size: 21px;
+        }
+    }
+    &__link {
+        color: $white;
+        background: $gradient-btn;
+        padding: 15px 30px;
+        display: inline-block;
+        border-radius: 10px;
+    }
+}
+.steps {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include pad-xs {
+        background: $white;
+        padding: 25px;
+    }
+    @include phone-md {
+        background: none;
+    }
+    @include phone-xs {
+        padding: 0 45px;
+    }
+    &__list {
+        line-height: 2.6;
+        @include phone-md {
+            line-height: 1.3;
+        }
+    }
+    &__step {
+        display: block;
+        @include phone-md {
+            text-align: center;
+            padding: 10px 0;
+        }
+    }
+    &__number {
+        color: $red;
+        border-radius: 30px;
+        border: 1px solid $red;
+        padding: 6px 12px;
+        @include phone-md {
+            display: block;
+            text-align: center;
+            width: 30px;
+            margin: 0 auto;
+            padding: 17px 12px;
+        }
+        @include phone-xs {
+            padding: 5px 0;
+        }
+    }
+    &__title {
+        @include phone-md {
+            display: block;
+            margin: 5px 0;
+        }
+    }
+}
+.footer {
+    &__copyright {
+        color: $grey;
+        font-size: 16px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    &__paylist {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__payitem {
+        img {
+            padding: 0 10px;
+        }
+    }
+}

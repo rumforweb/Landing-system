@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+.sidebar-section > .header {
+    padding: 0 1.25rem;
+    display: flex;
+}
+
+.sidebar-section > .header .controls {
+    flex: 1;
+}
+
+.sidebar-section > .header > .title {
+    color: #AAAAAA;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1.125rem 0;
+}
+
+.match {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.375rem;
+}
+
+.match:last-child {
+    margin-bottom: 0;
+}
+
+.match > div {
+    align-self: center;
+}
+
+.match > .game {
+    width: 2.1875rem;
+    text-align: center;
+}
+
+.match > .info {
+    width: auto;
+    background: #313131;
+    padding: 0.75rem 1.125rem;
+    flex: 1;
+}
+
+.teams {
+    display: flex;
+}
+
+.teams > .team::after {
+    content: 'vs';
+    color: #616161;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.75rem;
+    padding-top: 0.19375rem;
+}
+
+.teams > .team:last-child::after {
+    content: none;
+}
+
+.team {
+    display: flex;
+}
+
+.team > div {
+    align-self: center;
+}
+
+.team > .country {
+    margin-right: 0.375rem;
+}
+
+.team > .name {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.info {
+    display: flex;
+}
+
+.info > div {
+    align-self: center;
+}
+
+.info .event,
+.related-team > .related-team-info .country {
+    color: #616161;
+    text-transform: uppercase;
+    font-size: 0.6875rem;
+    font-weight: bold;
+}
+
+
+.info > div.status-container {
+    flex: 1;
+}
+
+.sidebar-section > div.header.underlied {
+    border-bottom: 1px solid rgba(170, 170, 170, .1);
+}
+
+.info .status {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: bold;
+    background: #C43315;
+    box-shadow: 0 0 1.875rem rgba(196, 51, 21);
+    padding: 0.1875rem 0.8125rem;
+    width: 3.1875rem;
+    float: right;
+}
+
+.related-teams {
+    padding: 1rem 1.25rem;
+}
+
+.related-team {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.related-team:last-child {
+    margin-bottom: 0;
+}
+
+.related-team > .image {
+    margin-right: 0.625rem; 
+}
+
+.related-team > .related-team-info .name {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.related-team > div {
+    align-self: center;
+}
+
+.raw-links-control {
+    align-self: center;
+    text-align: right;
+}
+
+.raw-links-control a {
+    font-size: 0.6875rem;
+    font-weight: bold;
+    color: #616161;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.raw-links-control a:hover {
+    text-decoration: none;
+}
+
+.tabs-control {
+    padding: 0;
+    margin-left: 0.9375rem;
+}
+
+.tabs-control > li {
+    display: inline-block;
+    padding-top: 1.125rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.tabs-control > li.active {
+    border-top: 3px solid #947A68;
+}
+
+.tabs-control > li.active > a {
+    color: white;
+}
+
+.tabs-control > li > a {
+    color: #AAAAAA;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tabs-control > li > a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.banner {
+    text-align: center;
+    margin: 2rem 0;
+}

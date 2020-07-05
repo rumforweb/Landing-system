@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test form</title>
+
+    <link rel="stylesheet" href="../__main/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="./locales.js"></script>
+
+    <script src="../__config/config.en.js"></script>
+    <script src="../__promo/promo.en.js"></script>
+    <script src="../__locale/locale.en.js"></script>
+    <script src="../__main/main.js"></script>
+</head>
+<body>
+
+    <h2 id="cb-main-text">default main text</h2>
+    <h3 id="cb-text-1">default text 1</h3>
+    <h4 id="cb-text-2">default text 2</h4>
+
+    <form id="cb-form" action="">
+        <div id="cb-email-container">
+            <input id="cb-email-input" type="text" />
+            <span id="cb-email-error"></span>
+        </div>
+
+        <div id="cb-password-container">
+            <input id="cb-password-input" type="password" />
+            <span id="cb-password-error"></span>
+        </div>
+
+        <div>
+            <button class="cb-currency" data-currency="EUR"><span>€</span></button>
+            <button class="cb-currency" data-currency="USD"><span>$</span></button>
+            <button class="cb-currency" data-currency="GBP"><span>&pound;</span></button>
+            <button class="cb-currency" data-currency="RUB"><span>₽</span></button>
+        </div>
+
+        <input id="cb-terms-checkbox" type="checkbox" />
+
+        <div id="cb-form-error"></div>
+
+        <a href="#" id="cb-policy-link" class="cbl-privatePolicy">Privacy Policy</a>,
+        <a href="#" id="cb-terms-link">Terms&Conditions</a>
+
+        <button id="cb-submit-button">Submit</button>
+
+        <a href="#" id="cb-login-link">Login</a>
+
+        <img class="cbl-lock" src="./images/en/lock.svg" />
+    </form>
+
+</body>
+</html>

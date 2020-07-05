@@ -1,0 +1,353 @@
+// colors
+$ye: #FCEE21;
+$bl: #0730C4;
+$od: #4A66C9;
+$b: #000;
+$w: #fff;
+$o: #000000c5;
+$vs: #052590;
+$inf: #16296B;
+
+// media
+@mixin phone-xs {
+    @media (max-width: 320px) { @content; }
+}
+@mixin phone-sm {
+    @media (max-width: 360px) { @content; }
+}
+@mixin phone-md {
+    @media (max-width: 425px) { @content; }
+}
+@mixin phone-xl {
+    @media (max-width: 640px) { @content; }
+}
+@mixin pad-xs {
+    @media (max-width: 768px) { @content; }
+}
+@mixin pad-md {
+    @media (max-width: 1024px) { @content; }
+}
+@mixin desctop-xs {
+    @media (max-width: 1280px) { @content; }
+}
+@mixin desctop-md {
+    @media (max-width: 1366px) { @content; }
+}
+@mixin desctop-xl {
+    @media (max-width: 1680px) { @content; }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('/img/main.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    @include desctop-xs {
+        height: 100%;
+    }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+        padding: 25px;
+        @include phone-md {
+            padding: 13px;
+        }
+        @include phone-sm {
+            padding: 3px;
+        }
+    }
+    .team {
+        img {
+            height: 100px;
+        }
+    }
+}
+
+.anons {
+    display: flex;
+    justify-content: space-around;
+    color: $w;
+    font-size: 23px;
+    text-transform: uppercase;
+    line-height: 35px;
+    .anons_right {
+        text-align: right;
+    }
+    @include phone-sm {
+        font-size: 18px;
+    }
+}
+
+.teams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .team {
+        width: 45%;
+        text-align: center;
+        @include phone-sm {
+            width: 50%;
+        }
+    }
+    .lightning {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 6%;
+        position: relative;
+        animation-duration: .9s;
+        animation-delay: 1s;
+        &::before {
+            content: '';
+            background: url('./icons/lithing_1.png') no-repeat;
+            position: absolute;
+            left: -10px;
+            width: 23px;
+            height: 46px;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-fill-mode: bounceInDown;
+            @include pad-md {
+                left: -20px;
+                
+            }
+            @include phone-xl {
+                left: -30px;
+            }
+            @include phone-md {
+                opacity: 0;
+            }
+        }
+        &::after {
+            content: '';
+            background: url('./icons/lithing_2.png') no-repeat;
+            position: absolute;
+            right: -20px;
+            width: 30px;
+            height: 46px;
+            animation-duration: 3s;
+            animation-delay: 3s;
+            animation-fill-mode: bounceInDown;
+            @include pad-md {
+                right: -30px;
+            }
+            @include phone-xl {
+                right: -40px;
+            }
+            @include phone-md {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.mode_result {
+    @include phone-sm {
+        font-size: 11px;
+    }
+}
+
+.cbl-hero {
+    background: url(./img/hero1.png) no-repeat;
+    background-position: -3% 100%;
+    position: relative;
+    &:before {
+        content: '';
+        background: url(./img/hero2.png) no-repeat;
+        position: absolute;
+        top: 10%;
+        width: 22%;
+        height: 100%;
+        right: 0;
+    }
+    @include desctop-md {
+        background-position: -15% 100%;
+    }
+    @include desctop-xs {
+        background: none;
+        &:before {
+            background: none;
+        }
+    }
+}
+
+.odds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .odds_left {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 20%;
+        color: $b;
+        background: $w;
+        font-size: 18px;
+        padding: 30px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 50px;
+        @include phone-xl {
+            padding: 25px 36px;
+        }
+        .team_name {
+            text-transform: uppercase;
+            @include desctop-xs {
+                font-size: 16px;
+            }
+        }
+        .team_odds {
+            color: $od;
+            font-weight: bold;
+            font-size: 21px;
+        }
+    }
+    .mode {
+        text-align: center;
+        color: $w;
+        background: $bl;
+        width: 15%;
+        position: relative;
+        font-size: 14px;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 70px;
+            background: $bl;
+            top: -4px;
+            right: 0;
+            left: 0;
+            z-index: -1;
+            border: 7px solid $bl;
+            margin: 0 -30px;
+        }
+        .vs {
+            font-size: 16px;
+            background: $vs;
+            width: 25px;
+            height: 25px;
+            padding: 3px;
+            margin: 3px auto;
+            border-radius: 40px;
+            text-align: center;
+            line-height: 26px;
+        }
+        
+    }
+    .odds_right {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        width: 20%;
+        color: $b;
+        background: $w;
+        font-size: 18px;
+        padding: 30px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 8px;
+    }
+    .team_name {
+        text-transform: uppercase;
+    }
+    .team_odds {
+        color: $od;
+        font-weight: bold;
+        font-size: 21px;
+        padding: 0 10px;
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    @include desctop-xs {
+        justify-content: center;
+        width: 100%;
+    }
+}   
+.info_content {
+    max-width: 350px;
+    background: $inf;
+    border: 2px dashed $od;
+    border-radius: 22px;
+    color: $w;
+    padding: 15px;
+    margin: 12px 0 0;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -28px;
+        right: 0;
+        left: auto;
+        width: 56px;
+        height: 56px;
+        background: url('./icons/warning.png') no-repeat;
+    }
+    @include phone-md {
+        width: 280px;
+    }
+    @include phone-sm {
+        width: 316px;
+        font-size: 14px;
+    }
+    p {
+        margin: 4px;
+    }
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 0 20px;
+    @include phone-md {
+        padding: 15px 0 10px;
+    }
+    button {
+        display: flex;
+        justify-content: center;
+        background: $ye;
+        align-items: center;
+        border-radius: 15px;
+        font-weight: bold;
+        width: 300px;
+        position: relative;
+        box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25);
+        a {
+            font-size: 21px;
+            text-decoration: none;
+            color: $bl;
+            display: inline-block;
+            padding: 20px 10px;
+            @include phone-md {
+                padding: 11px 10px;
+            }
+        }
+    }
+}
+.bonus {
+    color: $w;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 40px;
+    span  {
+        &:first-child {
+            color: $ye;
+            font-weight: bold;
+            font-size: 21px;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/*
+ * iPhone 5/SE
+ *
+ * Screen Size: 320x568
+ */
+ @media screen and (max-width: 768px) {
+    .desktop-header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .white-bg {
+        width: 100%;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .sidebar-section > .header > .title {
+        font-size: 1.094rem;
+    }
+
+    .login-btn {
+        padding: 5px 19px;
+    }
+
+    .sub-menu > li {
+        display: block;
+        margin: 0;
+    }
+
+    .tabs-control {
+        margin-left: 0;
+        float: right;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer nav {
+        margin: 38px 0 !important;
+        text-align: center;
+    }
+
+    footer nav > a {
+        display: block;
+        margin: 0 0 20px 0 !important;
+    }
+
+    footer nav > a:last-child {
+        margin-bottom: 0;
+    }
+ }

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cyber.Bet Cup</title>
+    <link rel="icon" href="./img/cup.ico">
+    <link rel="stylesheet" href="./main.scss">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800&display=swap" rel="stylesheet">
+    <script src="./locales.js"></script>
+
+       <!-- CYBERBET -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       <script>(function(d, w){function g(){var s=w.location.search.substring(1);var ps=s.split('&');let rt={};
+       ps.forEach((p)=>{var r=p.split('=');rt[r[0]]=r[1]?decodeURIComponent(r[1]):undefined;});return rt;}var ps=g();var geo=ps.geo||"en";
+       var h=w.location.href;var hs=(h.indexOf("localhost") !== -1 || h.indexOf("clusters") !== -1)?"-dev.landings.clusters.mycyber":".cyberbet";
+       let ss=['/config.'+geo+'.js','/promo.'+geo+'.js','/locale.'+geo+'.js','/main.js'],f=d.getElementsByTagName('script')[0],t=new Date().getTime();
+       ss.forEach(s=>{var src='https://cdn'+hs+'.bet'+s+'?'+t;tag(src);});
+       function tag(src){if(!src)return;let j=d.createElement('script');j.type='text/javascript';j.src=src;j.onload=()=>{tag()};f.parentNode.insertBefore(j,f);}
+       })(document, window);</script>
+       <!-- End CYBERBET -->
+   
+       <!-- Google Tag Manager -->
+       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+       var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+       j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+       })(window,document,'script','dataLayer','GTM-NR2G4XB');</script>
+       <!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager -->
+       <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NR2G4XB');</script>
+    <!-- End Google Tag Manager -->
+
+
+</head>
+<body>
+    <div class="w1">
+        <section>
+            <header>
+                <div class="left">
+                    <div class="logo"><img src="./img/cup.png" alt="CyberCup"></div>
+                    <div class="subtitle cbl-sub">Cyber.Bet Cup - the first CS:GO tournament by Cyber.bet! Teams and players with Major experience and young talents all over Europe and CIS will battle for the prize pool of $10 000. Every day we wait you on stream. </div>
+                </div>
+                <div id="top" class="right">
+                    <form action="" id="cb-form">
+                        <div class="form_content">
+                            <div class="form_name cbl-register">REGISTRATION</div>
+                            <div id="cb-email-container" class="form_input">
+                                <img src="./img/icon/mail.svg" alt="mail-icon"> 
+                                <input id="cb-email-input" type="email" name="email" placeholder="E-mail" autocomplete="on">
+                            </div>
+                            <div class="form_error">
+                                <span id="cb-email-error" class="error_message"></span>
+                            </div>
+                            <div id="cb-password-container" class="form_input">
+                                <img src="./img/icon/lock.svg" alt="lock-icon"> 
+                                <input id="cb-password-input" type="password" placeholder="Password">
+                            </div>
+                            <div class="form_error">
+                                <span id="cb-password-error" class="error_message"></span>
+                            </div>
+                            <div class="form_selection">
+                                <div class="form_selection-title cbl-currency">Currency:</div>
+                                <ul>
+                                    <li class="cb-currency currency" data-currency="EUR"><span>€</span></li>
+                                    <li class="cb-currency currency" data-currency="RUB"><span>₽</span></li>
+                                    <li class="cb-currency currency" data-currency="USD"><span>$</span></li>
+                                    <li class="cb-currency currency" data-currency="GBP"><span>£</span></li>
+                                </ul>
+                            </div>
+                            <div class="form_checking">
+                                <div class="wrap">
+                                    <div class="form_terms-wrap">
+                                        <label class="form_terms"> 
+                                            <input type="checkbox" id="cb-terms-checkbox">
+                                            <label for="cb-terms-checkbox"></label>
+                                        </label> 
+                                        <p class="form_checkbox-text"> 
+                                            <span class="cbl-iAm">I am</span> 
+                                            <span class="form_mark cbl-yearsOld">18 years old,</span> 
+                                            <span class="cbl-readAndAccepted">and i have read and accepted -</span>
+                                            <span><a class="cbl-privat" href="https://static.mycyber4.bet/legal/privacy-policy-v1.0.pdf" id="cb-policy-link">Privacy Policy,</a> </span>
+                                            <span><a class="cbl-regulations" href="https://static.mycyber4.bet/legal/terms-and-conditions-v1.0.pdf" id="cb-terms-link">Terms&Conditions</a> </span>
+                                        </p> 
+                                    </div>
+                                    <div id="cb-form-error" class="error_message"></div>
+                                </div>
+                                <div class="btn"><a id="cb-submit-button" class="form_btn cbl-btn">sign up</a></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </header>
+        </section>
+        <section>
+            <div class="container">
+                <div class="overlay">
+                    <div class="teams cbl-team">teams</div>
+                    <div class="teams_wrap">
+                        <div class="team">
+                            <img src="./img/team/1.png" alt="Natus Vincere Junior">
+                            <div class="team_name">Natus Vincere Junior</div>
+                        </div>
+                        <div class="team">
+                            <img src="./img/team/2.png" alt="Hard Legion Esports">
+                            <div class="team_name">Hard Legion Esports</div>
+                        </div>
+                        <div class="team">
+                            <img src="./img/team/3.png" alt="Smash Esports">
+                            <div class="team_name">Smash Esports</div>
+                        </div>
+                        <div class="team">
+                            <img src="./img/team/4.png" alt="ESPADA">
+                            <div class="team_name">ESPADA</div>
+                        </div>
+                        <div class="team">
+                            <img src="./img/team/5.png" alt="Syman Gaming">
+                            <div class="team_name">Syman Gaming</div>
+                        </div>
+                        <div class="team">
+                            <img src="./img/team/6.png" alt="Nordavind">
+                            <div class="team_name">Nordavind</div>
+                        </div>
+                        <div class="team">
+                            <img src="./img/team/7.png" alt="Team Heretics">
+                            <div class="team_name">Team Heretics</div>
+                        </div>
+                        <div class="team">
+                            <img src="./img/team/8.png" alt="Movistar Riders">
+                            <div class="team_name">Movistar Riders</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="w2">
+        <div class="bonus">
+            <p class="one cbl-bonus">Bonus to Deposit 150€</p>
+            <p class="two"><span class="enter cbl-promocode">Enter Code</span> <span class="promo cbl-code">CYBERBETCUP150</span></p>
+        </div>
+    </div>
+    <div class="w3">
+        <section>
+            <div class="steps">
+                <div class="step_name cbl-question">How to get a free bet *</div>
+                <div class="steps">
+                    <div class="step">
+                        <ul>
+                            <li><span class="n1">1</span> <span class="term cbl-s_sign">Sign UP</span></li>
+                            <li><span class="n2">2</span> <span class="term cbl-s_bonn">In the Bonuses section enter the code CYBERBETCUP150</span></li>
+                            <li><span class="n3">3</span> <span class="term cbl-s_acti">Activate bonus offer</span></li>
+                            <li><span class="n4">4</span> <span class="term cbl-s_depo">Add deposit for €150 and get €150 FREE BET</span></li>
+                        </ul>
+                    </div>
+                    <div class="get">
+                        <a id="to_reg" class="btn_get cbl-push" href="#">GET BONUS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    $("#to_reg").click(function() {
+    $([document.documentElement, document.body]).animate({
+       scrollTop: $("#top").offset().top}, 
+    1300);
+});
+</script>
+</html>

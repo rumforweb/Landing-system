@@ -1,0 +1,155 @@
+/* 
+
+ (c) 2019 Cyber.bet 
+
+ В данном файле содержаться стили для оформления типографии в блоке .text-content, это белый
+ блок с текстом и картинками который используется для статей.
+
+ */
+
+@charset "UTF-8";
+
+.text-content {
+    padding: 46px 30px 0 30px;
+}
+
+.text-content h3 {
+    font-size: 33px;
+    line-height: 42px;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+
+.spend {
+    color: #600eba;
+}
+
+.spend:hover {
+    color: #600eba;
+}
+
+.meta {
+    font-size: 12px;
+    display: flex;
+    margin-top: 12px;
+}
+
+.meta > .img {
+    margin-right: 4.5px;
+    /* Костыляка */
+    margin-top: -1.2px;
+}
+
+.meta > .game {
+    color: #600DBA;
+    text-transform: uppercase;
+    margin-right: 9px;
+}
+
+.meta > .post-created-at {
+    color: #B4B4B4;
+}
+
+.meta > .post-created-at::before {
+    content: '•';
+    padding-right: 5px;
+}
+
+.text-content > p {
+    margin: 25px 0;
+    color: #4B4B4B;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: lighter;
+}
+
+.text-content > p.medium-text {
+    font-weight: normal;
+}
+
+.text-content > blockquote {
+    text-align: center;
+    font-size: 14px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.text-content > .blockquote-standard {
+    color: #B5B5B5;
+    background: url("../images/citata.png") no-repeat center top,
+                url("../images/polosa.png") no-repeat center bottom;
+    padding-top: 25px;
+    padding-bottom: 16px;
+}
+
+.text-content > .blockquote-gray-bg {
+    background: #F6F6F6;
+    padding: 20px;
+    margin: 0 -30px;
+    color: #4B4B4B;
+}
+
+.text-content > .image-with-caption {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.text-content > .image-with-caption cite {
+    display: block;
+    color: #B5B5B5;
+    margin-top: 8px;
+}
+
+.text-content > img {
+    margin: 0 auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.banner, .footer-banner {
+    position: relative;
+    z-index: 100;
+}
+
+.banner-container {
+    position: relative;
+}
+
+.banner-text {
+    position: absolute;
+    color: #fff;
+    text-transform: uppercase;
+    bottom: 25px;
+    width: 100%;
+    z-index: 999;
+    line-height: 1.3;
+}
+
+.footer-banner-text {
+    position: absolute;
+    color: #fff;
+    text-transform: uppercase;
+    right: 0;
+    top: 17px;
+    width: 54%;
+    margin: 0 auto;
+    z-index: 999;
+    line-height: 1.3;
+}
+
+.banner-text p, .footer-banner-text p {
+    margin: 0;
+    font-size: 27px;
+    font-weight: bold;
+    text-shadow: 0px 0px 11px #000;
+}
+
+.footer-banner-text p  {
+    font-size: 23px;
+}
+
+.banner-text p span, .footer-banner-text p span {
+    color: yellow;
+}

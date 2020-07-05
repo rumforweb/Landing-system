@@ -1,0 +1,54 @@
+footer {
+    padding: 25px 30px;
+    background-color: #202126;
+}
+
+.footer-menu {
+    display: flex;
+}
+
+.footer-banner {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer-menu > div {
+    align-self: center;
+}
+
+footer nav > a {
+    color: white;
+    font-size: 14px;
+    margin-right: 24px;
+}
+
+footer nav > a:hover {
+    color: white;
+}
+
+footer nav > a:last-child {
+    margin-right: 0;
+}
+
+footer nav {
+    margin-left: 35px;
+}
+
+footer .footer__socials-wrapper {
+    flex: 1;
+}
+
+footer .footer__socials {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+footer .footer__socials > li {
+    display: inline-block;
+    margin-right: 32px;
+}
+
+footer .footer__socials > li:last-child {
+    margin-right: 0;
+}

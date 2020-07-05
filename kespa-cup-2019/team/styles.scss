@@ -1,0 +1,53 @@
+// team styles.scss
+$yellow: #FCEE1F;
+$wall: #2c2828;
+$name: #999999;
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: $wall;
+    min-width: 800px;
+    margin: 0 auto; 
+}
+.logo {
+    padding: 25px 0;
+}
+.result {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    .team {
+        .team_wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                width: 30%;
+            }
+            span {
+                color: $name;
+                font-weight: 700;
+                font-size: 18px;
+            }
+        }
+    }
+    .miidle {
+        justify-content: center;
+        .coefficient {
+            .coefficient_wrap {
+                background: $yellow;
+                padding: 20px;
+                .exemple {
+                    font-size: 40px;
+                }
+            }
+        }
+        .versus {
+            font-size: 40px;
+            font-weight: 900;
+            padding: 20px 20px;
+            color: $yellow;
+        }
+    } 
+}

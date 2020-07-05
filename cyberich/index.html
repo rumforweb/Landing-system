@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+    <title>CYBER BET: Esports</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.sass">
+    <script src="./locales.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+            OneSignal.push(function() {
+            OneSignal.init({
+            appId: "85013e45-8f89-436b-8392-b472aecc8752",
+            });
+        });
+    </script>
+
+    <!-- CYBERBET -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet" />
+    <!-- CYBERBET -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>(function(d, w){function g(){var s=w.location.search.substring(1);var ps=s.split('&');let rt={};
+    ps.forEach((p)=>{var r=p.split('=');rt[r[0]]=r[1]?decodeURIComponent(r[1]):undefined;});return rt;}var ps=g();var geo=ps.geo||"en";
+    var h=w.location.href;var hs=(h.indexOf("localhost") !== -1 || h.indexOf("clusters") !== -1)?"-dev.landings.clusters.mycyber":".cyberbet";
+    let ss=['/config.'+geo+'.js','/promo.'+geo+'.js','/locale.'+geo+'.js','/main.js'],f=d.getElementsByTagName('script')[0],t=new Date().getTime();
+    ss.forEach(s=>{var src='https://cdn'+hs+'.bet'+s+'?'+t;tag(src);});
+    function tag(src){if(!src)return;let j=d.createElement('script');j.type='text/javascript';j.src=src;j.onload=()=>{tag()};f.parentNode.insertBefore(j,f);}
+    })(document, window);</script>
+    <!-- End CYBERBET -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', 'GTM-NR2G4XB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="hide">
+  <div class="body_wrapper" style="background-image: url(./img/back.jpg);">
+    <div class="header">
+      <div class="header_line"></div>
+      <div class="trapezium">
+        <div class="trapezium_left"></div>
+        <div class="trapezium_right"></div>
+      </div>
+      <img src="./svg/logo_short.svg" alt="CyberBet" class="header__logo">
+    </div>
+    <div class="wrapper_content">
+      <div class="tittle_container">
+          <h2 id="mainText" class="Double-your-money cbl-doulbe">Double your chances</h2>
+            <div class="promo_section">
+                <div id="cb-text-1" class="promo_title cbl-use">use promocode</div>
+                <div id="cb-text-3" class="code_title">CYBERICH</div>
+            </div>
+          <h2 class="title__deposit">
+              <span id="cb-text-2" class="free cbl-get">GET €10 FREEBET</span>
+              <br />
+              <span class="free cbl-depo">for €10 deposit</span>
+          </h2>
+      </div>
+      <div class="content">
+          <div class="register_form">
+              <div class="form__header">
+                <span class="cbl-reg">REGISTRATION</span>
+              </div>
+
+              <form id="cb-form" action="">
+                  <div class="form__content">
+                      <div class="form_content__body">
+                          <div class="fields">
+
+                              <div id="cb-email-container" class="input__container">
+                                  <input id="cb-email-input" type="email" class="fields__input" placeholder="Email" autocomplete="on">
+                                  <span id="cb-email-error" class="error_message"></span>
+                              </div>
+
+                              <div id="cb-password-container" class="input__container">
+                                  <input id="cb-password-input" type="password" class="fields__input" placeholder="Password">
+                                  <span id="cb-password-error" class="error_message"></span>
+                              </div>
+                          </div>
+
+                          <div class="currency__container">
+                              <span class="currency__title cbl-cyrrency">Currency</span>
+                              <div class="cb-currency currency" data-currency="EUR">
+                                  <span class="currency__text">€</span>
+                              </div>
+                              <div class="cb-currency currency" data-currency="USD">
+                                  <span class="currency__text ">$</span>
+                              </div>
+                              <div class="cb-currency currency" data-currency="GBP">
+                                  <span class="currency__text" >&pound;</span>
+                              </div>
+                              <div class="cb-currency currency" data-currency="RUB">
+                                  <span class="currency__text">₽</span>
+                              </div>
+                          </div>
+
+                          <div class="border__line"></div>
+
+                          <div class="terms">
+                              <label class="container" >
+                                  <input type="checkbox" id="cb-terms-checkbox">
+                                  <span class="checkmark" id="checkmark"></span>
+                              </label>
+
+                              <span class="checkbox__text">
+                                <span class="cbl-accept">I am 18 years old and I have read and accepted</span>
+                                
+                                <a class="term__modal cbl-privat" href="#" id="cb-policy-link">Privacy Policy</a>,
+                                <a class="term__modal cbl-terms" href="#" id="cb-terms-link">Terms&Conditions</a>
+                            </span>
+                          </div>
+
+                          <div id="cb-form-error" class="error_message"></div>
+                      </div>
+                      <div class="submit__button">
+                          <button id="cb-submit-button" class="btn cbl-register">REGISTRATION</button>
+                          <a href="#" id="cb-login-link" class="cbl-account">Already have an account?</a>
+                      </div>
+                  </div>
+              </form>
+
+          </div>
+      </div>
+    </div>
+    <footer class="footer"><span class="footer__text">© 2020 Ice Gaming N.V.</span></footer>
+  </div>
+
+</body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR2G4XB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+</html>

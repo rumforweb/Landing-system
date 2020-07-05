@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>odds - matches</title>
+
+    <link rel="icon" href="./icons/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="./main.scss">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+    
+
+       <!-- CYBERBET -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       <script>(function(d, w){function g(){var s=w.location.search.substring(1);var ps=s.split('&');let rt={};
+       ps.forEach((p)=>{var r=p.split('=');rt[r[0]]=r[1]?decodeURIComponent(r[1]):undefined;});return rt;}var ps=g();var geo=ps.geo||"en";
+       var h=w.location.href;var hs=(h.indexOf("localhost") !== -1 || h.indexOf("clusters") !== -1)?"-dev.landings.clusters.mycyber":".cyberbet";
+       let ss=['/config.'+geo+'.js','/promo.'+geo+'.js','/locale.'+geo+'.js','/main.js'],f=d.getElementsByTagName('script')[0],t=new Date().getTime();
+       ss.forEach(s=>{var src='https://cdn'+hs+'.bet'+s+'?'+t;tag(src);});
+       function tag(src){if(!src)return;let j=d.createElement('script');j.type='text/javascript';j.src=src;j.onload=()=>{tag()};f.parentNode.insertBefore(j,f);}
+       })(document, window);</script>
+       <!-- End CYBERBET -->
+   
+       <!-- Google Tag Manager -->
+       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+       var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+       j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+       })(window,document,'script','dataLayer','GTM-NR2G4XB');</script>
+       <!-- End Google Tag Manager -->
+</head>
+<body>
+    <header>
+        <div class="container cbl-hero">
+            
+                <img src="./icons/brand.svg" alt="CYBERBET">
+                <div class="anons">
+                    <div class="anons_left">
+                            <div class="anons_data--name">Анонс матча</div>
+                            <div class="anons_time--name">Время</div>
+                    </div>
+
+                    <div class="anons_right">
+                            <div class="anons_data">03.03.2020</div>
+                            <div class="anons_time">21.00</div>
+                    </div>
+                </div>
+                <div class="teams">
+                    <picture class="team">
+                        <img src="./img/team1.png" alt="">
+                    </picture>
+
+                    <picture class="lightning animated bounceInDown">
+                        <img src="./icons/lithing_3.png" alt="">
+                    </picture>
+                    
+                    <picture class="team">
+                        <img src="./img/team2.png" alt="">
+                    </picture>
+                </div>
+                <div class="odds">
+                    <div class="odds_left">
+                        <div class="team_name">natus vincere</div>
+                        <div class="team_odds">2.18</div>
+                    </div>
+
+                    <div class="mode">
+                        <div class="mode_time">21.00</div>
+                        <div class="vs">vs</div>
+                        <div class="mode_result">подбеда</div>
+                    </div>
+
+                    <div class="odds_right">
+                            <div class="team_name">OG</div>
+                            <div class="team_odds">1.40</div>
+                    </div>
+                </div>
+        
+        </div>
+    </header>
+    <section>
+        <div class="info">
+            <div class="info_content">
+                <p>OG все также тренируется и играет с т3 командами. </p>
+                <p>Они должны проходить Akatsuki без проблем и идти дальше. 
+                        Поставь на них 10$ и получи после матча 38$</p>
+            </div>
+        </div>
+        <div class="btn">
+            <button>
+                <img src="./icons/gamepad.svg" alt="">
+                <a href="http://cyber-bet.net" class="go_win">Ставь на победу</a>
+            </button>
+        </div>
+        <div class="bonus">
+            <span>10€ </span>
+            <span>на первую ставку</span>
+        </div>
+    </section>
+    <section>
+        <div id="online"></div>
+    </section>
+</body>
+</html>

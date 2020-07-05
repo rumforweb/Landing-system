@@ -1,0 +1,497 @@
+@font-face {
+  font-family: "Conv_10318";
+  src: local("☺"), url("fonts/10318.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  height: 3rem;
+  background-color: #000fa6;
+  display: flex;
+  justify-content: center;
+}
+
+.trap,
+.logo {
+  position: absolute;
+  z-index: 1;
+
+  /* width: 600px; */
+}
+.mobile {
+  display: none;
+}
+.logo {
+}
+
+.footer {
+  height: 2.6rem;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-font {
+  font-family: Roboto;
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fcee21;
+}
+.footer-mobile {
+  display: none;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+*,
+*:after,
+*:before {
+}
+
+h1,
+h2 {
+  font-family: "Conv_10318", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: oblique;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.container {
+  flex-grow: 3;
+  height: 90%;
+}
+/* left block */
+.left-side {
+  width: 65%;
+  float: left;
+  height: 100%;
+}
+
+.background {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+}
+
+/* right block  */
+.text-second {
+  display: none;
+}
+.right-side {
+  float: right;
+  width: 35%;
+  height: 100%;
+  background-color: #283244;
+}
+
+.reg-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.reg-form img {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#registrationform {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+#registrationform i {
+  position: absolute;
+}
+
+input {
+  width: 75%;
+  border-radius: 10px;
+  background-color: #1e2633;
+  border: none;
+  text-align: center;
+
+  font-family: Roboto;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #a9a9a9;
+  border: 1px solid transparent;
+}
+
+input:focus,
+input:hover {
+  outline: none;
+  border: solid 1px rgba(252, 238, 33, 0.25);
+  transition: 0.2s;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.error {
+  font-family: Roboto;
+  color: red;
+  font-size: 0.7rem;
+}
+#cb-form-error {
+  margin-bottom: 10px;
+}
+
+/* rtwe */
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 20px;
+  color: #fcee21;
+  position: absolute;
+  margin: 0 !important;
+  height: 25px;
+}
+
+.input-field {
+  width: 100%;
+  text-align: left;
+  padding: 20px 20px 20px 70px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+/* Currency		 */
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.radio-toolbar input[type="radio"] {
+  display: none;
+}
+.radio-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.radio-toolbar .currency {
+  border: solid 1px transparent;
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 5px 5px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #1e2633;
+  color: #a9a9a9;
+}
+
+.radio-toolbar .cb-active {
+  border: solid 1px #fcee21;
+  color: #fcee21;
+}
+.currency {
+  width: 18px;
+  height: 35px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+/* terms */
+.checkbox__text {
+}
+.radio-terms {
+  display: flex;
+  align-items: center;
+}
+
+.radio-terms > p {
+  font-size: 12px;
+}
+.radio-terms label {
+  border: solid 1px transparent;
+  cursor: pointer;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px 5px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #1e2633;
+  color: #1e2633;
+}
+
+.radio-terms input[type="radio"] {
+  display: none;
+  color: #fcee21;
+}
+.radio-terms input[type="radio"]:checked + label {
+  border: solid 1px #fcee21;
+  color: #fcee21;
+}
+
+/* submit */
+.button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.btn {
+  border-radius: 10px;
+  background-color: #0973f0;
+  text-transform: uppercase;
+  padding: 15px 0;
+  width: 100%;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* text */
+.text {
+  margin: 5%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+p {
+  color: #a9a9a9;
+  font-family: Roboto;
+}
+.text h1 {
+  font-size: 47px;
+  color: #ffffff;
+}
+.text h2 {
+  font-size: 27px;
+  color: #fcee21;
+}
+
+.line {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 15%;
+}
+a {
+  text-decoration: none;
+  color: #fcee21;
+}
+
+/* checkbox */
+.terms {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.terms input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.radio-terms label {
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #1e2633 !important;
+  border-radius: 5px;
+  border: solid 1px #1e2633;
+}
+
+/* On mouse-over, add a grey background color */
+.terms:hover input ~ .checkmark {
+  background-color: #283244;
+}
+
+/* When the checkbox is checked, add a blue background */
+.terms input:checked ~ .checkmark {
+  background-color: #283244;
+  border-radius: 5px;
+  border: solid 1px #fcee21;
+  color: #fcee21;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.terms input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.terms .checkmark:after {
+  left: 11px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+
+  border: solid #fcee21;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* midea */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 50px;
+    float: none;
+  }
+  h2 {
+    font-size: 28px;
+    float: none;
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  .trap > img {
+    max-width: 500px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 92px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+  .trap > img {
+    max-width: 500px;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  h1 {
+    font-size: 92px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+  .trap > img {
+    max-width: 700px;
+  }
+}
+@media only screen and (min-width: 1281px) {
+  h1 {
+    font-size: 92px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+}
+
+.left-side {
+  height: 100%;
+}
+
+.right-side {
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: auto;
+}
+
+.wrapper {
+  height: auto;
+}
+
+@media (min-width: 1001px) {
+  .right-side {
+    padding: 0;
+  }
+
+  .container {
+    height: 100vh;
+  }
+  .wrapper {
+    height: 100vh;
+  }
+}

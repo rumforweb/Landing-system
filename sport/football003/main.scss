@@ -1,0 +1,485 @@
+$gradient: linear-gradient(116.88deg, #03155A 32.14%, #002CD0 99.53%);
+$grey: #f5f7fc;
+$form-gray: #F6F7FC;
+$input: #B1CEFA;
+$white: #fff;
+$blue: #0233c4;
+$pink: #f60066;
+$pink-opasily: #ffc6de;
+$yellow: #FCEE21;
+$black: #000;
+$black-overlay: #0000009a;
+$shadow: #7b7b7b;
+$text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.43);
+
+
+// media
+@mixin phone-xs {
+    @media (max-width: 320px) { @content; }
+}
+@mixin phone-sm {
+    @media (max-width: 375px) { @content; }
+}
+@mixin phone-md {
+    @media (max-width: 425px) { @content; }
+}
+@mixin phone-xl {
+    @media (max-width: 640px) { @content; }
+}
+@mixin pad-xs {
+    @media (max-width: 768px) { @content; }
+}
+@mixin pad-md {
+    @media (max-width: 1024px) { @content; }
+}
+@mixin desctop-xs {
+    @media (max-width: 1280px) { @content; }
+}
+@mixin desctop-md {
+    @media (max-width: 1440px) { @content; }
+} 
+@mixin desctop-xl {
+    @media (max-width: 1920px) { @content; }
+} 
+@mixin desctop-xxl {
+    @media (max-width: 2560px) { @content; }
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $gradient;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 1680px;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    @include desctop-xl {
+        width: 1440px;
+    }
+    @include desctop-md {
+        width: 1280px;
+    }
+    @include desctop-xs {
+        width: 980px;
+    }
+    @include pad-md {
+        width: 768px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include pad-xs {
+        width: 640px;
+    }
+    @include phone-xl {
+        width: 425px;
+    }
+    @include phone-md {
+        width: 375px;
+    }
+    @include phone-sm {
+        width: 320px;
+    }
+    @include phone-xs {
+        width: 300px;
+    }
+    &__teams {
+        position: relative;
+        top: 30px;
+        @include phone-md {
+            top: 15px;
+        }
+        @include pad-xs{
+            img {
+                height: 50px;
+            }
+        }
+        @include phone-xl {
+            img {
+                height: 30px;
+            }
+        }
+        @include phone-sm {
+            img {
+                height: 25px;
+            }
+        }
+    }
+    &__logo {
+        img {
+            @include phone-sm {
+                height: 25px;
+            }
+        }
+    }
+}
+
+.steps_container {
+    width: 1680px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    @include desctop-xl {
+        width: 1440px;
+    }
+    @include desctop-md {
+        width: 1280px;
+    }
+    @include desctop-xs {
+        width: 980px;
+    }
+    @include pad-md {
+        width: 768px;
+    }
+    @include pad-xs {
+        display: none;
+    }
+} 
+
+section {
+    background: url(./img/ball.jpg) no-repeat;
+    background-size: cover;
+    @include pad-xs {
+        background-position: 33%;
+    }
+    @include phone-md {
+        background-position: 63%;
+    }
+}
+
+.wrapper {
+    display: flex;
+    padding: 75px 0 45px 0;
+    @include pad-xs {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 0 45px 0;
+    }
+    @include phone-sm {
+        padding: 0 0 23px 0;
+    }
+}
+
+form {
+    width: 500px;
+    border-radius: 10px;
+    @include pad-md {
+        width: 400px;
+    }
+    @include pad-xs {
+        order: 2;
+    }
+    @include phone-md {
+        width: 320px;
+    }
+    @include phone-xs {
+        width: 290px;
+    }
+}
+
+.form__title {
+    background: $form-gray;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 28px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 25px 0;
+    @include phone-sm {
+        padding: 15px 0;
+    }
+    @include phone-xs {
+        font-size: 20px;
+    }
+}
+.form__input {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding: 15px;
+    background: $white;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @include phone-md {
+            width: 50%;
+        }
+    }
+    &__fields {
+        padding: 10px 5px;
+        font-size: 16px;
+        margin: 0 5px;
+        border-color: $input;
+        border-radius: 3px;
+        border-style: double;
+    }
+    &__errorMessage {
+        font-size: 14px;
+        color: $pink;
+        text-align: start;
+        padding: 5px;
+    }
+}
+
+.currency__container {
+    display: flex;
+    background: $white;
+    padding: 0 25px;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    @include phone-xs {
+        padding: 0 10px;
+    }
+    & .cb-currency {
+        margin: 0 15px;
+        @include phone-md {
+            margin: 0 8px;
+        }
+    }
+    & .currency__text {
+        padding: 8px 14px;
+        background: $form-gray;
+        border-radius: 3px;
+        display: block;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.cb-active {
+    border: 1px solid $pink-opasily;
+    background-color: $form-gray;
+    color: $pink;
+    border-radius: 3px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    padding: 5px 25px;
+    background: $white;
+}
+
+.terms__container {
+    input[type=checkbox]  {
+        display: none;
+    }
+    label::before {
+        content: '';
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 3px;
+        -moz-box-shadow: 0px 0px 0px 1px $blue;
+        -o-box-shadow: 0px 0px 0px 1px $blue;
+        -webkit-box-shadow: 0px 0px 0px 1px $blue;
+        box-shadow: 0px 0px 0px 1px $blue;
+    }
+    input[type=checkbox]:checked + label::before {
+        cursor: pointer;
+        background: url(./img/icons/check.png) no-repeat;
+        background-position: 50% 50%;
+        -moz-box-shadow: 0px 0px 0px 1px $blue;
+        -o-box-shadow: 0px 0px 0px 1px $blue;
+        -webkit-box-shadow: 0px 0px 0px 1px $blue;
+        box-shadow: 0px 0px 0px 1px $blue;
+    }
+    margin-right: 20px;
+}
+
+.checkbox {
+    font-size: 12px;
+    &__text {
+        font-size: 12px;
+    }
+    &__policy {
+        display: flex;
+    }
+    &__term {
+        display: block;
+    }
+}
+
+.error_message {
+    font-size: 12px;
+    color: $pink;
+    padding-left: 23px;
+    background: $white;
+    padding-bottom: 10px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    &__bonus {
+        background: $yellow;
+        color: $black;
+        width: 400px;
+        padding: 13px 0;
+        text-align: center;
+        font-size: 21px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        box-shadow: 0px 0px 4px 0px $shadow;
+        @include pad-md {
+           width: 350px;
+        }
+        @include phone-md {
+            width: 275px;
+        }
+    }
+    &__acc {
+        color: $blue;
+        font-size: 14px;
+        padding: 15px 0;
+    }
+}
+
+.promo {
+    text-transform: uppercase;
+    padding: 48px 147px;
+    text-shadow: $text-shadow;
+    @include desctop-xs {
+        padding: 48px 20px;
+    }
+    @include pad-xs {
+        order: 1;
+        padding: 30px 20px;
+    }
+    @include phone-md {
+        padding: 15px 30px;
+    }
+    @include phone-sm {
+        padding: 15px 10px;
+    }
+    @include phone-xs {
+        padding: 15px 0;
+    }
+    &__title {
+        font-size: 35px;
+        color: $white;
+        font-weight: bold;
+        padding-bottom: 15px;
+        @include desctop-xs {
+           font-size: 31px;
+        }
+        @include pad-md {
+            font-size: 26px;
+        }
+        @include phone-md {
+            font-size: 23px;
+        }
+    }
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__code {
+        color: $yellow;
+        font-size: 32px;
+        font-weight: 600;
+        @include pad-md {
+            font-size: 18px;
+        }
+    }
+    &__line {
+        width: 3px;
+        height: 30px;
+        background: $yellow;
+        margin: 0 10px;
+    }
+    &__get {
+        color: $white;
+        background: $black-overlay;
+        width: 190px;
+        padding: 10px;
+        font-size: 28px;
+        font-weight: bold;
+        @include phone-md {
+            font-size: 21px;
+            width: 146px;
+        }
+        @include phone-sm {
+            background: none;
+            font-size: 12px;
+        }
+    }
+}
+
+
+
+.steps { 
+    background: $black-overlay;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    & .step {
+        color: $white;
+        font-size: 18px;
+        padding: 25px 0;
+        font-weight: bold;
+        @include desctop-xs {
+            font-size: 16px;
+        }
+        @include pad-md {
+            text-align: center;
+        }
+        span {
+            color: $yellow;
+            font-weight: 600;
+            @include pad-md {
+                display: block;
+                padding: 5px 0;
+            }
+        }
+    }
+}
+
+footer {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    padding: 25px 0;
+    font-weight: bold;
+}
+
+
+.steps__mc {
+    display: none;
+    @include pad-xs {
+        display: block;
+        padding-bottom: 20px;
+    }
+    @include phone-xs{
+        width: 257px;
+        margin: 0 auto;
+    }
+    .step {
+        color: $white;
+        background: $black-overlay;
+        padding: 10px 0;
+        text-transform: uppercase;
+        @include phone-xs {
+            font-size: 12px;
+        }
+        span {
+            color: $yellow;
+            font-weight: 600;
+            padding: 0 15px;
+        }
+    }
+}

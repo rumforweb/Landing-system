@@ -1,0 +1,239 @@
+.main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.85);
+
+
+  @media @mobile-media {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    text-align: center;
+    
+  }
+
+  @media @tablet-media {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    
+  }
+
+  @media @desktop-media {
+    padding-left: 5.6rem;
+    padding-right: 5.6rem;
+    text-align: justify;
+  }
+
+  @media @mobile-sm-media {
+    text-align: center;
+    margin: 31px 0 41px;
+  }
+
+}
+
+.main-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  line-height: 1;
+
+  @media @mobile-media {
+    font-size: 3.5rem;
+  }
+
+  @media @tablet-media {
+    font-size: 4rem;
+  }
+
+  @media @mobile-sm-media {
+    font-size: 40px;
+  }
+
+  @media @mobile-xs-media {
+    font-size: 30px;
+  }
+  
+
+}
+
+.main-description {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  line-height: 1;
+  font-weight: bold;
+
+  @media @desktop-media {
+    font-size: 3rem;
+  }
+
+  @media @tablet-media {
+    font-size: 2rem;
+  }
+
+  @media @mobile-sm-media {
+    font-size: 29px;
+  }
+
+  @media @mobile-xs-media {
+    font-size: 23px;
+  }
+}
+.lines {
+  display: flex;
+  margin-top: 1.5rem;
+  margin-bottom: 2.25rem;
+  @media @mobile-media {
+    justify-content: center;
+  }
+  @media @desktop-media {
+    justify-content: start;
+  }
+  @media @mobile-sm-media {
+    justify-content: center;
+  }
+
+}
+
+.main-divider {
+  width: 79px;
+  height: 1px;
+  border-radius: 0.167rem;
+  background-color: @accent-color;
+}
+.main-divider2 {
+  width: 39px;
+  height: 1px;
+  margin-left: 23px;
+  border-radius: 0.167rem;
+  background-color: @accent-color;
+}
+
+.main-button {
+  display: inline-block;
+  border-radius: 10px;
+  background: @gradient-color;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  padding: 20px 63px 20px 22px;
+  box-sizing: border-box;
+  font-size: 18px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 13px;
+    left: auto;
+    background-image: url("../../img/arrow.svg");
+  }
+  &:hover {
+    padding: 20px 75px 20px 22px;
+    transition: .2s;
+  }
+
+  .cyber {
+    color: @yellow;
+  }
+
+}
+
+#intl_direct-advertiser, #intl_real-time-report, #intl_Unique-promocodes, #intl_Lifetime-60, #intl_Weekly-payouts, #init_Personal-account {
+  font-size: 14px;
+  border-radius: 21px;
+  background: @gradient-steps;
+  margin-right: 15px;
+  width: 205px;
+  text-align: center;
+  @media @mobile-sm-media {
+    width: 205px;
+    margin-right: 0;
+  }
+}
+
+#intl_direct-advertiser {
+  padding: 11px 25px 11px 39px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 14px;
+    background: url("../../img/svg/1.svg") no-repeat;
+    left: 15px;
+    right: auto;
+  }
+}
+
+#intl_real-time-report {
+  padding: 11px 26px 11px 38px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url("../../img/svg/2.svg") no-repeat;
+    left: 15px;
+    right: auto;
+  }
+}
+
+#intl_Unique-promocodes {
+  padding: 11px 26px 11px 38px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 19px;
+    height: 15px;
+    background: url("../../img/svg/3.svg") no-repeat;
+    left: 15px;
+    right: auto;
+  }
+}
+
+#intl_Lifetime-60 {
+  padding: 11px 26px 11px 38px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url("../../img/svg/4.svg") no-repeat;
+    left: 15px;
+    right: auto;
+  }
+}
+
+#intl_Weekly-payouts {
+  padding: 11px 26px 11px 38px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 16px;
+    background: url("../../img/svg/5.svg") no-repeat;
+    left: 15px;
+    right: auto;
+  }
+}
+
+#init_Personal-account {
+  padding: 11px 26px 11px 38px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 16px;
+    background: url("../../img/svg/6.svg") no-repeat;
+    left: 15px;
+    right: auto;
+  }
+}

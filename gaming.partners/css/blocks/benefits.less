@@ -1,0 +1,88 @@
+.benefits-benefit {
+  @media @desktop-media {
+    font-size: 1.25rem;
+  }
+}
+
+.benefits {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 80px;
+  padding-left: 0;
+  list-style: none;
+  max-width: 9.1rem;
+  margin: 0 auto;
+  justify-content: center;
+  @media @mobile-media {
+    margin: auto;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  @media @mobile-sm-media {
+    max-width: none;
+    padding-top: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media @mobile-xs-media {
+    width: 93%;
+  }
+
+}
+
+.benefits-benefit {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  &--advertiser {
+    align-items: flex-start;
+    img {
+      display: block;
+      margin-top: 0.5rem;
+      width: 100%;
+      max-width: 7.3rem;
+      height: auto;
+    }
+  }
+
+  @media @mobile-media {
+    margin: 7px 0;
+  }
+  @media @mobile-sm-media {
+    margin: 7px 0;
+  }
+}
+
+.benefits-icon {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.7rem;
+  background-color: @secondary-color;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--advertiser {
+    background-image: url("../../img/megaphone.png");
+    background-size: 1.45rem;
+  }
+
+  &--revshare {
+    background-image: url("../../img/percent.png");
+    background-size: 1.2rem;
+  }
+
+  &--cpa {
+    background-image: url("../../img/manager.png");
+    background-size: 1.2rem;
+  }
+
+  &--payouts {
+    background-image: url("../../img/cash.png");
+    background-size: 0.8rem;
+  }
+}

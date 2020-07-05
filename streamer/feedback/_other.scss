@@ -1,0 +1,42 @@
+// media
+// @mixin tablet-md {
+//     @media (max-width: 991px) { @content; }
+// }
+
+
+.wall {
+    font-family: 'Montserrat', sans-serif;
+    background: $title;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+h1 {
+    font-size: 35px;
+    color: $yell;
+    text-align: center;
+}
+
+.thanks_massage {
+    color: $white;
+    width: 40%;
+    margin: 0 auto;
+    @include tablet-md {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+.back_to_form {
+    color: $barby;
+    text-decoration: none;
+    display: inline-block;
+    background: #01255d;
+    padding: 10px;
+}
+.back_to_form:hover {
+    transition: .2s;
+    background: $yell;
+    color: $black;
+}

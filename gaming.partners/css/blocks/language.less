@@ -1,0 +1,35 @@
+.language {
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    color: @accent-color;
+  }
+
+  &--active {
+    font-size: 21px;
+    color: @yellow;
+
+    &:hover {
+      color: @accent-color;
+    }
+  }
+  @media @mobile-sm-media {
+    font-size: 16px;
+  }
+}
+
+.language-divider {
+  display: inline-block;
+  width: 1px;
+  height: 30px;
+  background-color: #ffffff;
+  vertical-align: text-bottom;
+  @media @mobile-sm-media {
+    height: 19px;
+  }
+}

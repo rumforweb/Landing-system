@@ -1,0 +1,285 @@
+// colors
+$ye: #FCEE21;
+$blue: rgba(0, 91, 191, 0.2);
+$blue-m: rgba(0, 4, 39, 0.59);
+$pink: #FF355D;
+$grey: #dedede;
+$black: #000;
+$white: #fff;
+$shadow: #151821;
+
+// media
+@mixin phone-xs {
+    @media (max-width: 320px) { @content; }
+}
+@mixin phone-md {
+    @media (max-width: 425px) { @content; }
+}
+@mixin phone-xl {
+    @media (max-width: 640px) { @content; }
+}
+@mixin pad-xs {
+    @media (max-width: 768px) { @content; }
+}
+@mixin pad-md {
+    @media (max-width: 1024px) { @content; }
+}
+@mixin desctop-xs {
+    @media (max-width: 1366px) { @content; }
+}
+@mixin desctop-md {
+    @media (max-width: 1680px) { @content; }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('/img/main.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    @include pad-md {
+        background-position: 37%;
+    }
+    @include pad-xs {
+        background-position: 51%;
+    }
+    @include phone-xl {
+        height: 100%;
+    }
+    @include phone-xs {
+        background-size: auto;
+    }
+
+}
+.container {
+    background: $blue;
+    backdrop-filter: blur(8px);
+    width: 421px;
+    height: 100vh;
+    margin-left: 75px;
+    text-align: center;
+    @include pad-xs {
+        background: $blue-m;
+    }
+    @include phone-xl {
+        width: 330px;
+        margin: 0 auto;
+    }
+    @include phone-xs {
+        width: 290px;
+    }
+}
+.logo {
+    padding-top: 25px;
+    img {
+        @include phone-xs {
+            height: 30px;
+        }
+    }
+}
+.form_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    @include phone-xs {
+        height: auto;
+    }
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 999;
+}
+.form_content {
+    width: 300px;
+    padding: 40px 0;
+    @include phone-xs {
+        padding: 10px 0;
+        width: 260px;
+    }
+}
+.form_name {
+    font-size: 22px;
+    color: $ye;
+    text-transform: uppercase;
+    text-align: center;
+}
+.form_input {
+    box-shadow: 0 0 0 1px $white;
+    border-radius: 3px;
+    input[type=email], input[type=password] {
+        width: 100%;
+        background: transparent;
+        color: $grey;
+        font-size: 18px;
+        text-transform: uppercase;
+        border: none;
+        padding: 15px 10px;
+        &:focus {
+            outline: none;
+        }
+    }
+    input[type=email]::placeholder, input[type=password]::placeholder {
+        color: $grey;
+    }
+}
+.form_input {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    img {
+        padding: 10px;
+    }
+}
+.form_error {
+    margin: 0;
+    .error_message {
+        color: $pink;
+        display: block;
+    }
+}
+.form_selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 0;
+    .form_selection-title {
+        color: $grey;
+        text-transform: uppercase;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        li {
+            padding: 13px;
+            border-radius: 1px;
+            cursor: pointer;
+            span {
+                font-size: 16px;
+                color: $white;
+            }
+        }
+    }
+}
+.form_checking {
+    margin: 0;
+}
+.form_terms-wrap {
+    display: flex;
+    align-items: center;
+}
+.form_terms {
+    input[type=checkbox]  {
+        display: none;
+    }
+    label::before {
+        content: '';
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 3px;
+        -moz-box-shadow: 0px 0px 0px 1px $ye;
+        -o-box-shadow: 0px 0px 0px 1px $ye;
+        -webkit-box-shadow: 0px 0px 0px 1px $ye;
+        box-shadow: 0px 0px 0px 1px $ye;
+    }
+    input[type=checkbox]:checked + label::before {
+        cursor: pointer;
+        background: url(./img/icons/check.svg) no-repeat;
+        background-position: 50% 50%;
+        -moz-box-shadow: 0px 0px 0px 1px $ye;
+        -o-box-shadow: 0px 0px 0px 1px $ye;
+        -webkit-box-shadow: 0px 0px 0px 1px $ye;
+        box-shadow: 0px 0px 0px 1px $ye;
+    }
+}
+.form_checkbox-text {
+    padding: 0 0 0 13px;
+    width: 100%;
+    margin: 0;
+    text-align: initial;
+    span {
+        font-size: 12px;
+        font-family: 'Montserrat', sans-serif;
+        color: $white;
+        a {
+            color: $ye;
+            display: inline-block;
+        }
+    }
+    .form_mark {
+        color: $ye;
+    }
+}
+.error_message {
+    margin: 10px 0;
+    color: $pink;
+}              
+.btn { 
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    a {
+        cursor: pointer;
+    }
+    @include phone-xs {
+        margin: 0;
+    }
+    .form_btn {
+        font-size: 24px;
+        text-transform: uppercase;
+        padding: 15px 20px;
+        display: block;
+        color: $white;
+        background: $pink;
+        border-radius: 3px;
+        width: 100%;
+        text-align: center;
+        -webkit-appearance: none;
+        box-shadow: 0px 0px 39px #151821;
+    }
+}
+.cb-active {
+    box-shadow: 0 0 0 1px $white;
+    color: $white;
+    border-radius: 2px;
+}      
+.step_list_bg {
+    background: $blue;
+    @include phone-xs {
+        background: $black;
+    }
+}
+.step_list {
+    text-align: left;
+    margin: 7px auto;
+    width: 44%;
+    @include phone-md {
+        width: 66%;
+    }
+    .step {
+        color: $white;
+        padding: 5px;
+        text-transform: uppercase;
+        font-size: 14px;
+        .point {
+            color: $ye;
+            font-weight: bold;
+            padding: 0 3px;
+            margin: 0 9px;
+            border-bottom: 1px solid $ye;
+        }
+    }
+}
+
+.copy {
+    color: $grey;
+    padding: 45px 0 10px;
+    text-align: center;
+    font-size: 12px;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/icons/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.scss">
+    <title>Ball - CYBER.BET</title>
+
+        <!-- CYBERBET -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>(function(d, w){function g(){var s=w.location.search.substring(1);var ps=s.split('&');let rt={};
+        ps.forEach((p)=>{var r=p.split('=');rt[r[0]]=r[1]?decodeURIComponent(r[1]):undefined;});return rt;}var ps=g();var geo=ps.geo||"en";
+        var h=w.location.href;var hs=(h.indexOf("localhost") !== -1 || h.indexOf("clusters") !== -1)?"-dev.landings.clusters.mycyber":".cyberbet";
+        let ss=['/config.'+geo+'.js','/promo.'+geo+'.js','/locale.'+geo+'.js','/main.js'],f=d.getElementsByTagName('script')[0],t=new Date().getTime();
+        ss.forEach(s=>{var src='https://cdn'+hs+'.bet'+s+'?'+t;tag(src);});
+        function tag(src){if(!src)return;let j=d.createElement('script');j.type='text/javascript';j.src=src;j.onload=()=>{tag()};f.parentNode.insertBefore(j,f);}
+        })(document, window);</script>
+        <!-- End CYBERBET -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="container__logo">
+                <a href="#"><img src="./img/cb.svg" alt=""></a>
+            </div>
+            <div class="container__teams">
+                <img src="./img/1.png" alt="">
+                <img src="./img/2.png" alt="">
+                <img src="./img/3.png" alt="">
+                <img src="./img/4.png" alt="">
+                <img src="./img/5.png" alt="">
+                <img src="./img/6.png" alt="">
+                <img src="./img/7.png" alt="">
+                <img src="./img/8.png" alt="">
+                <img src="./img/9.png" alt="">
+                <img src="./img/10.png" alt="">
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="wrapper">
+                <form id="cb-form" action="">
+                    <div class="form__title cbl-betOnWinner">
+                        Create Account 
+                    </div>
+                    <div class="form__input">
+                        <div id="cb-email-container" class="form__input__container">
+                            <input id="cb-email-input" type="email" class="form__input__fields cbl-validate" placeholder="Email" autocomplete="on">
+                            <span id="cb-email-error" class="form__input__errorMessage cbl-invalid"></span>
+                        </div>
+                        <div id="cb-password-container" class="form__input__container">
+                            <input id="cb-password-input" type="password" class="form__input__fields" placeholder="Password">
+                            <span id="cb-password-error" class="form__input__errorMessage cbl-onlyLatin"></span>
+                        </div>
+                    </div>
+                    <div class="currency__container">
+                        <span class="currency__title cbl-currency">Currency:</span>
+                        <div class="cb-currency currency"data-currency="EUR">
+                            <span class="currency__text">€</span>
+                        </div>
+                        <div class="cb-currency currency" data-currency="USD">
+                            <span class="currency__text">$</span>
+                        </div>
+                        <div class="cb-currency currency" data-currency="GBP">
+                            <span class="currency__text">&pound;</span>
+                        </div>
+                        <div class="cb-currency currency" data-currency="RUB">
+                            <span class="currency__text">₽</span>
+                        </div>
+                    </div>
+
+                    <div class="terms">
+                        <label class="terms__container" >
+                            <input type="checkbox" id="cb-terms-checkbox">
+                            <label class="terms__checkmark" for="cb-terms-checkbox"></label>
+                        </label>
+
+                        <span class="checkbox">
+                                <span class="checkbox__text cbl-iAm">I am</span>
+                                <span class="checkbox__text cbl-yearsOld"">18 years old,</span>
+                                <span class="checkbox__text">and I have read and accepted</span>
+                                <span class="checkbox__policy">
+                                    <a class="checkbox__term cbl-policy" href="#" id="cb-policy-link">Privacy Policy</a>, 
+                                    <a class="checkbox__term cbl-terms" href="#" id="cb-terms-link">Terms&Conditions</a>
+                                </span>
+                        </span>
+                    </div>
+                    <div id="cb-form-error" class="error_message cbl-invalid"></div>
+                    <div class="button">
+                        <a id="cb-submit-button" class="button__bonus" href="#">Create Account</a>
+                        <a id="cb-login-link" href="#" class="button__acc cbl-acc">Already have an account?</a>
+                    </div>
+
+                </form>
+                <div class="mobile">
+                    <div class="promo">
+                        <div class="promo__title">
+                            Activate Promocode
+                        </div>
+                        <div class="promo__content">
+                            <div class="promo__code">CYBERICH</div>
+                            <div class="promo__line"></div>
+                            <div class="promo__get">Get 10% For Deposit</div>
+                        </div>
+                    </div>
+                    <div class="steps__mc">
+                        <div class="steps__m">
+                            <div class="step"><span>step 1 </span> Registration</div>
+                            <div class="step"><span>step 2 </span> activate promocode</div>
+                            <div class="step"><span>step 3 </span> make a deposit</div>
+                            <div class="step"><span>step 4 </span> get bonus</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="steps_container">
+            <div class="steps">
+                <div class="step"><span>step 1 |</span> Registration</div>
+                <div class="step"><span>step 2 |</span> activate promocode</div>
+                <div class="step"><span>step 3 |</span> make a deposit</div>
+                <div class="step"><span>step 4 |</span> get bonus</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        © 2020 Ice Gaming N.V
+    </footer>
+</body>
+</html>

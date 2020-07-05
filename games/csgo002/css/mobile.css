@@ -1,0 +1,113 @@
+body {
+  background-color: black;
+}
+
+.header {
+  height: 20px;
+}
+
+.left-side {
+  width: 0%;
+  display: flex;
+}
+.right-side {
+  width: 100%;
+  background-image: url(../img/img.svg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.mobile {
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.desctop {
+  display: none;
+}
+
+.footer-font {
+  font-family: Roboto;
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fcee21;
+}
+
+.reg-form {
+  width: 310px;
+  border-radius: 5px;
+  background-color: #283244;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.reg-form > img {
+  width: 200px !important;
+}
+
+.text-second {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.text-second h1 {
+  font-size: 50px;
+  color: #ffffff;
+}
+.text-second h2 {
+  font-size: 28px;
+  color: #fcee21;
+}
+
+.text {
+  display: none;
+}
+.line {
+  margin-left: 0;
+}
+
+i {
+  font-size: 12px;
+}
+.checkbox__text:before {
+  top: 20px;
+}
+.checkbox__text:after {
+  top: 20px;
+}
+
+.radio-toolbar label {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.radio-terms label {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 10px;
+}
+
+/* icons */
+
+.input-field {
+  font-size: 16px;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 10px 10px 10px 50px;
+}
+
+.icon {
+  padding: 10px 10px 10px 10px;
+  height: 20px;
+}

@@ -1,0 +1,10 @@
+.cb-currency {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #777;
+    padding: 0.3rem;
+}
+
+.cb-currency.cb-active {
+    background-color: red;
+}

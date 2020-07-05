@@ -1,0 +1,196 @@
+// colors
+$gp: #000e38;
+$white: #fff;
+$title: #002c6f;
+$barby: #ff00ff;
+$yell: #fcee1f;
+$black: #000;
+
+// media
+@mixin tablet {
+    @media (max-width: 1366px) { @content; }
+}
+@mixin tablet-md {
+    @media (max-width: 991px) { @content; }
+}
+@mixin tablet-xs {
+    @media (max-width: 896px) { @content; }
+}
+@mixin phone-md {
+    @media (max-width: 414px) { @content; }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('./img/main.jpg') no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+ 
+    @import 'feedback/other';
+
+    .container {
+        .logo {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            img {
+                width: 20%;
+                @include phone-md {
+                    width: 45%;
+                }
+            }
+            .gp {
+                background: $gp;
+                padding: 20px;
+            }
+            @include phone-md {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        .wrap {
+            .cb_title {
+                color: $white;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 35px;
+                text-transform: uppercase;
+                font-weight: bold;
+                display: flex;
+                flex-flow: wrap;
+                background: #002c6f;
+                position:  relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin-top: 30px;
+                p {
+                    text-align: center;
+                    .cb_stream {
+                        color: $barby;
+                    }
+                    @include tablet-xs {
+                        margin: 20px 0px;
+                    }
+                }
+                :first-child {
+                    width: 6%;
+                    animation-duration: 3s;
+                    animation-delay: 4s;
+                    animation-iteration-count: infinite;
+                    @include phone-md {
+                        width: 13%;
+                    }
+                }
+                :last-child {
+                    width: 6%;
+                    animation-duration: 2s;
+                    animation-delay: 2s;
+                    animation-iteration-count: infinite;
+                    @include phone-md {
+                        width: 13%;
+                    }
+                }
+            }
+            @include tablet-xs {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        .wrap_mail {
+            width: 400px;
+            font-family: 'Montserrat', sans-serif;
+            @include tablet-md {
+                width: 100%;
+            }
+            @include tablet-xs {
+                margin-top: 0;
+            }
+            @include phone-md {
+                width: 100%;
+            }
+            .cb_mail_y {
+                font-size: 27px;
+                color: $white;
+                padding: 10px 15px;
+                color: $yell;
+                display: inline-block;
+                background: $black;
+                font-weight: bold;
+                display: block;
+                @include phone-md {
+                    font-size: 24px;
+                    width: 100%;
+                }
+            }
+            .cb_mail_w {
+                color: $white;
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                text-align: center;
+                font-size: 21px;
+                padding: 15px 0;
+                background: $title;
+                span {
+                    font-size: 16px;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}
+.mail_form {
+    background: $title;
+    color: $white;
+    p {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 25px 9px;
+        align-items: center;
+        label {
+            font-size: 21px;
+            color: $yell;
+            padding: 0 10px;
+            display: block;
+        }
+    }
+    input[type="email"] {
+        padding: 10px;
+        font-size: 18px;
+        width: 63%;
+        color: $yell;
+        background: $title;
+        border: none;
+        border: 1px solid $yell;
+        border-radius: 3px;
+        &:focus {
+            border: 1px solid $yell;
+        }
+        @include tablet-xs {
+            width: 78%;
+        }
+    }
+    button {
+        cursor: pointer;
+        color: $black;
+        background: $yell;
+        font-size: 24px;
+        text-transform: uppercase;
+        padding: 10px 14px;
+        display: block;
+        border-radius: 3px;
+        border: none;
+        width: 96%;
+        margin: 0px auto;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+}
+

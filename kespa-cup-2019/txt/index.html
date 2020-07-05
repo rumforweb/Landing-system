@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KESPA CUP 2019</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./styles.scss">
+
+    <!-- CYBERBET -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>(function (d) {
+        let ss = ['/feeds.js'], f = d.getElementsByTagName('script')[0], t = new Date().getTime();
+        function tag() {
+            let s = ss.shift(); if (!s) return; let j = d.createElement('script'); j.type = 'text/javascript';
+            j.src = 'https://cdn.cyberbet.bet' + s + '?' + t; j.onload = () => { tag() }; f.parentNode.insertBefore(j, f);
+        } tag();
+        })(document);</script>
+    <!-- End CYBERBET -->
+
+</head>
+<body>
+    <section>
+        <div class="wall">
+            <div class="result row">
+                <div class="team">
+                    <div class="team_wrap">
+                        <span id="js-feeds-club1-name"></span>
+                    </div>
+                </div>
+                <div class="miidle row">
+                    <div class="coefficient">
+                        <div class="coefficient_wrap">
+                            <div id="js-feeds-club1-odds" class="exemple">0</div>
+                        </div>
+                    </div>
+                    <div class="versus">VS</div>
+                    <div class="coefficient">
+                        <div class="coefficient_wrap">
+                            <div id="js-feeds-club2-odds" class="exemple">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team">
+                    <div class="team_wrap">
+                        <span id="js-feeds-club2-name"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+<script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,651 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body span {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body ul, body li {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url(../images/main.jpg) no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+header .view {
+  width: 100%;
+}
+
+
+
+header .container_side {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header .container_side img {
+  padding: 30px 0 40px;
+}
+
+
+header .game_view .container_side--game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .game_view .container_side--game span {
+  font-weight: 900;
+  font-size: 58px;
+  display: inline-block;
+  padding-left: 18px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+header .game_view .container_side--title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: block;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+header .game_view .container_side--title .container_side_side--motto {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 26px;
+  color: #FCEE21;
+  text-shadow: 0px 2px 5px rgba(50, 1, 1, 0.75);
+  z-index: 0;
+  justify-content: center;
+  text-align: center;
+  width: 340px;
+  padding: 10px 0;
+}
+
+header .game_view .container_side--title .container_side--description {
+  background: rgba(17, 68, 216, 0.54);
+  z-index: 0;
+  padding: 10px 10px;
+  z-index: 0;
+  width: 340px;
+  text-align: center;
+}
+
+header .game_view .container_side--title .container_side--description h1 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header .game_view .container_side--title .container_side--description h1 span:first-child {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+header .game_view .container_side--title .container_side--description h1 span:last-child {
+  font-weight: 300;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+header .container_side--form {
+  width: 340px;
+}
+header .container_side--form form .form_name {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  background: #011441;
+  padding: 10px;
+}
+
+header .container_side--form form .form_input--wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 300;
+  margin: 15px 0 30px 0;
+}
+
+header .container_side--form form .form_input--wrap input {
+  width: 100%;
+  height: 40px;
+  background: #011341;
+  border: none;
+  border-radius: 2px;
+  color: #FCEE21;
+  padding-left: 19px;
+  margin-left: 25px;
+  font-size: 17px;
+}
+
+header .container_side--form form .form_input--wrap input:focus {
+  outline: none;
+}
+
+header .container_side--form form .form_input--wrap input::-webkit-input-placeholder {
+  color: #4288D5;
+  text-transform: uppercase;
+}
+
+header .container_side--form form .form_input--wrap input:-ms-input-placeholder {
+  color: #4288D5;
+  text-transform: uppercase;
+}
+
+header .container_side--form form .form_input--wrap input::-ms-input-placeholder {
+  color: #4288D5;
+  text-transform: uppercase;
+}
+
+header .container_side--form form .form_input--wrap input::placeholder {
+  color: #4288D5;
+  text-transform: uppercase;
+}
+
+header .container_side--form form .form_input--wrap {
+  position: relative;
+}
+
+header .container_side--form form .form_input--wrap .error_message {
+  position: absolute;
+  top: 36px;
+  color: red;
+  padding: 9px;
+  border-radius: 1px;
+  font-size: 16px;
+}
+
+header .container_side--form form .form_money--wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header .container_side--form form .form_money--wrap .form_money-mark {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  margin-left: 55px;
+}
+
+
+
+header .container_side--form form .form_money--wrap ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+header .container_side--form form .form_money--wrap ul .cb-currency span {
+  cursor: pointer;
+  padding: 7px 11px;
+  border-radius: 6px;
+  display: inline-block;
+  background: #013564;
+  color: #4288D5;
+}
+
+.cb-active {
+  border: 1px solid #fcee1f;
+  color: #fcee1f;
+  border-radius: 3px;
+}
+
+header .container_side--form form .form_check--radio {
+  padding-top: 47px;
+}
+
+header .container_side--form form .form_check--radio .form_check--wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 25px;}
+
+header .container_side--form form .form_check--radio .form_check--wrap .form_check--terms input[type="checkbox"] {
+  display: none;
+}
+
+header .container_side--form form .form_check--radio .form_check--wrap .form_check--terms label:before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 0px 0px 1px #FCEE21;
+  -o-box-shadow: 0px 0px 0px 1px #FCEE21;
+  -webkit-box-shadow: 0px 0px 0px 1px #FCEE21;
+  box-shadow: 0px 0px 0px 1px #FCEE21;
+  background: #FCEE21;
+}
+
+header .container_side--form form .form_check--radio .form_check--wrap .form_check--terms input[type="checkbox"]:checked + label::before {
+  cursor: pointer;
+  background: url(../icons/check.svg) no-repeat;
+  background-position: 50% 50%;
+  -moz-box-shadow: 0px 0px 0px 1px #FCEE21;
+  -o-box-shadow: 0px 0px 0px 1px #FCEE21;
+  -webkit-box-shadow: 0px 0px 0px 1px #FCEE21;
+  box-shadow: 0px 0px 0px 1px #FCEE21;
+}
+
+header .container_side--form form .form_check--radio .form_check--wrap .form_check-checkbox--text {
+  font-weight: 300;
+  font-size: 12px;
+  width: 285px;
+}
+
+header .container_side--form form .form_check--radio .form_check--wrap .form_check-checkbox--text .form_mark {
+  color: #FCEE21;
+}
+
+header .container_side--form form .form_check--radio .form_check--wrap .form_check-checkbox--text span {
+  color: #fff;
+}
+
+header .container_side--form form .form_check--radio .form_check--wrap .form_check-checkbox--text span a {
+  cursor: pointer;
+  color: #fff;
+}
+
+header .container_side--form form .form_check--radio .form_btn {
+  width: 100%;
+  display: inline-block;
+  background: #FCEE21;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 0;
+  margin-top: 5px;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  color: #000;
+}
+
+header .container_side--form form .form_check--radio .form_btn:hover {
+  cursor: pointer;
+}
+
+header .container_side--form form .form_check--radio {
+  position: relative;
+}
+
+header .container_side--form form .form_check--radio .error_message {
+  color: red;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  padding: 9px;
+  border-radius: 1px;
+  font-size: 16px;
+}
+
+.hero {
+  text-align: center;
+  padding: 15px 0 30px;
+  font-size: 14px;
+}
+
+.ready {
+    color: #fff;
+}
+.login {
+  color: #fcee1f;
+}
+footer .footer_side {
+  background: #000;
+  position: relative;
+}
+
+footer .footer_side::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: auto;
+  width: 45%;
+  height: 374px;
+  background: #0233C4;
+}
+
+footer .footer_side::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: 55%;
+  height: 100%;
+  background: #000;
+  z-index: -1;
+}
+
+footer .footer_side .footer_side--steps {
+  padding: 60px 0;
+}
+
+footer .footer_side .footer_side--steps p {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+footer .footer_side .footer_side--steps ul {
+  padding-top: 23px;
+}
+
+footer .footer_side .footer_side--steps ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 300;
+  color: #DDDDDD;
+  font-size: 16px;
+  margin: 13px 0;
+}
+
+footer .footer_side .footer_side--steps ul li span:first-child {
+  color: #FCEE21;
+  font-weight: 900;
+  font-size: 18px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 6px 12px;
+  display: inline-block;
+  width: 35px;
+  margin-right: 12px;
+  display: block;
+}
+
+footer .footer_side .footer_side--steps ul li span {
+  display: block;
+  font-size: 15px;
+}
+
+footer .footer_side .footer_side--steps ul li strong {
+  color: #FCEE21;
+  font-size: 21px;
+}
+
+footer .footer_side .footer_phrase {
+  font-size: 35px;
+  text-align: center;
+  color: #0233C4;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: 0px -5px #001f79, 0px 0px #0e0e0e;
+  padding: 65px 0;
+}
+
+footer .footer_side .footer_cards {
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+
+footer .footer_side .footer_cards p {
+  color: #FCEE21;
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+footer .footer_side .footer_cards ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+footer .footer_side .footer_cards ul li {
+  padding: 0 2px;
+}
+
+footer .footer_side .footer_cards ul li img {
+  width: 100%;
+}
+
+.bootom_copyright {
+  background: #000;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.bootom_copyright .bootom {
+  color: #FCEE21;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* media */
+
+@media (min-width: 2400px) {
+  footer .footer_side::before {
+    width: 46%;
+  }
+}
+
+@media (max-width: 1366px) { 
+  header .container_side--form form .form_check--radio .error_message {
+    top: 85px;
+  }
+  footer .footer_side .footer_cards {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    background-position: 22%;
+  }
+  header .container_side {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) { 
+  header .container_side--form form .form_check--radio .error_message {
+    top: 82px;
+  }
+}
+
+@media (max-width: 991px) {
+  header .game_view {
+    padding-left: 0;
+  }
+  header .container_side--form {
+    margin: 0 auto;
+  }
+  header .game_view .container_side--game {
+    display: flex;
+    justify-content: center;
+  }
+  header .game_view .container_side--title {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer_side::before {
+    width: 100%;
+  }
+  footer .footer_side .footer_side--steps p {
+    text-align: center;
+  }
+  footer .footer_side .footer_cards {
+    margin-left: 0px;
+  }
+
+}
+
+@media (max-width: 760px) {
+  header .view {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  header .game_view .container_side--title {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 599px) {
+  header .game_view .container_side--title {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  header .game_view .container_side--title .container_side_side--motto {
+    font-size: 29px;
+    padding: 11px 0;
+  }
+  header .game_view .container_side--title .container_side--description {
+    padding: 10px 0;
+  }
+  header .container_side--form {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  header .container_side--form form {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  header .container_side--form form .form_check--radio .form_check--wrap {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+  header .container_side--form form .form_check--radio .form_check--wrap .form_check--terms {
+    padding-right: 25px;
+  }
+  header .container_side--form form .form_check--radio .form_check--wrap .form_check-checkbox--text {
+    font-size: 14px;
+    width: 100%;
+  }
+  header .game_view .container_side--game {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  header .container_side--form form .form_check--radio .error_message {
+    top: 97px;
+  }
+  footer .footer_side::before {
+    top: 0;
+    right: auto;
+    width: 100%;
+    height: 50%;
+  }
+  footer .footer_side .footer_cards ul li {
+    padding: 0 10px;
+  }
+  
+}
+
+@media (max-width: 320px) {
+  header .game_view .container_side--game span {
+    font-size: 45px;
+  }
+  header .game_view .container_side--title .container_side_side--motto {
+    font-size: 31px;
+    padding: 0;
+  }
+  header .container_side--form {
+    width: 100%;
+  }
+  header .container_side--form form .form_check--radio .error_message {
+    top: 166px;
+    padding: 0;
+  }
+  footer .footer_side::before {
+    height: 45%;
+  }
+  footer .footer_side .footer_side--steps p {
+    margin-left: 0;
+  }
+  header .game_view .container_side--title .container_side--description {
+    width: 290px;
+    padding: 10px 20px;
+  }
+  header .container_side img {
+    padding: 10px 0 20px;
+  }
+}

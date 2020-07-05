@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap')
+$primary-font: 'Roboto', sans-serif
+$primary-color: #88b5f1
+$link-color: #88b5f1
+$bg-color: #fff
+$second-color: #ffffff
+$btn-active: #67cf35
+$btn-dis: #ade791
+$invalid: #f73a2c
+$valid: #42f456
+$btn-hover: #f5ec5680
+$sm: 374px
+$md: 767px
+$lr: 1200px
+
+@mixin respond-to($media) 
+  @if $media == handhelds
+    @media only screen and (max-width: $sm)  
+      @content
+  
+  @else if $media == medium
+    @media only screen and (min-width: $sm) and (max-width: $md)  
+      @content
+  
+  @else if $media == large
+    @media only screen and (min-width: $md + 1) and (max-width: $lr)
+      @content
+  @else if $media == pc
+    @media only screen and (min-width: $lr + 1)
+      @content
+ 
+html
+  box-sizing: border-box 
+  font-family: $primary-font
+  background: #f1f1f1
+  font-size: 16px
+  @media only screen and (max-width: 900px)
+    font-size: 10px
+  @include respond-to(large) 
+    font-size: 10px
+  @media only screen and (min-width: 1201px)
+    font-size: 11px
+  @media only screen and (min-width: 1900px)
+    font-size: 16px
+
+body 
+  margin: 0
+  padding: 0
+  font-family: Roboto
+  
+.hide
+  display: none
+
+.show
+  display: block
+
+.flex_block 
+  display: flex
+  justify-content: center
+  align-items: center
+
+.title_text 
+  font-weight: bold
+  font-size: 3.5rem
+  font-style: normal
+  font-stretch: normal
+  line-height: normal
+  letter-spacing: normal
+  margin: 0
+  text-align: left
+  @include respond-to(medium) 
+    font-size: 2rem
+    line-height: 2rem
+    text-align: center
+  @include respond-to(handhelds)
+    line-height: 1
+    font-size: 2rem
+    text-align: center
+
+.blur
+  filter: blur(5px)
+
+.body_wrapper
+  position: relative
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  background-attachment: fixed
+  background-position: center top
+  background-size: 100% 100%
+  background-repeat: no-repeat
+
+.register_form 
+  width: 40rem
+  height: 40rem
+  display: flex
+  flex-direction: column
+  border-radius: 5px
+  background-color: $second-color
+  font-size: 1rem
+  position: absolute
+  left: 0
+  right: 0
+  top: 5rem
+  margin: auto
+  z-index: 99
+  @media only screen and (max-width: $md)
+    // max-width: 80%
+    min-width: 17.5rem
+    min-height: 22.5rem
+  @media only screen and (max-width: 450px)
+    width: 100%
+    min-height: 380px
+    height: 410px
+
+.form__header 
+  position: relative
+  @extend .flex_block
+  background-color: $bg-color
+  height: 6.31rem
+  font-size: 1.875rem
+  flex: 0 1 auto
+  border-radius: 5px 5px 0 0 
+  width: 100%
+  // @include respond-to(medium)
+  //   height: 3rem
+  // @include respond-to(handhelds)
+  //   height: 3rem
+
+.form__header span 
+  font-size: 1.3rem
+  font-weight: 800
+  font-style: normal
+  font-stretch: normal
+  line-height: normal
+  letter-spacing: normal
+  text-align: right
+  color: #75809f
+  @include respond-to(medium)
+    font-size: 1.3rem
+  @include respond-to(handhelds)
+    font-size: 1.3rem
+
+.form__content 
+  display: flex
+  flex: 1 1 auto
+  flex-direction: column
+  justify-content: space-evenly
+  align-items: stretch
+  padding: 0 15%
+  @include respond-to(handhelds)
+    padding:  0 0.625rem
+
+.form_content__body
+  @extend .flex_block
+  align-items: flex-start
+  flex: 1 1 auto
+  justify-content: space-evenly
+  flex-direction: column
+
+.fields 
+  width: 100%
+  display: flex
+  flex-direction: column
+  margin-top: 1.875rem
+  @media screen and (max-width: $md)
+    margin-top: 1rem
+
+::-webkit-credentials-auto-fill-button 
+  visibility: hidden
+  pointer-events: none
+  position: absolute
+  right: 0
+
+.fields__input 
+  height: 2.875rem
+  border-radius: 3px
+  border: solid 1px #e1e1e1
+  background-color: $second-color
+  width: 100%
+  outline: none
+  padding: 1rem
+  padding-left: 1.25rem
+  font-size: 1em
+  margin-top: 0.5rem
+  @include respond-to(medium)
+    height: 2.2rem 
+    font-size: 0.8rem
+    padding: 0.31rem
+  @include respond-to(handhelds)
+    height: 2rem
+    font-size: 0.8rem
+    padding: 0.31rem
+  &:hover
+    background-color: #f5f7fc
+
+.input__container
+  width: 100%
+  position: relative
+  text-align: left
+  &:first-child
+    margin-bottom: 1.5rem
+  label
+    color: #75809f
+    font-weight: bold
+
+.input_eye
+  position: absolute
+  right: 10%
+  cursor: pointer
+  width: 1.9rem
+  height: 2.875rem
+  top: 0rem
+  @include respond-to(medium)
+    height: 2.2rem
+    width: 1.3rem
+  @include respond-to(handhelds)
+    height: 2.2rem
+    width: 1.3rem
+
+.error_message 
+  font-size: 0.6rem
+  color: $invalid
+  margin-bottom: 0.31rem
+  @include respond-to(handhelds)
+    font-size: 0.6em
+
+.valid
+  border: solid 1px $valid
+  background-color: rgb(232, 240, 254) 
+
+.invalid
+  border: solid 1px $invalid !important
+
+.currency__container
+  @extend .flex_block
+  width: 100%
+  margin-top: 2rem
+  justify-content: flex-start
+  align-items: center
+  @include respond-to(medium)
+    margin-top: 1.8rem
+  @include respond-to(handhelds)
+    margin-top: 1.8rem
+
+.currency_message
+  @include respond-to(handhelds)
+    float: right
+    margin-top: 0.31rem
+    font-size: 0.6em
+
+.currency
+  width: 3rem
+  height: 3rem
+  border-radius: 3px
+  border: 1px solid $bg-color
+  margin: 0 0.625rem
+  @extend .flex_block
+  cursor: pointer
+  background-color: $bg-color
+  transition: .3s
+  @include respond-to(medium)
+    height: 2.5rem
+    margin: 0 0.4rem
+  @include respond-to(handhelds)
+    margin: 0 0.4rem
+
+.invalid_currency
+  color: $invalid
+
+.disable
+  color: #75809f
+  border: solid 1px #e1e1e1
+  
+.disable:hover
+  color: #282828
+  box-shadow: rgba(156, 199, 253, .4) 0px 1px 5px 0px, rgba(156, 199, 253, .4) 0px 2px 2px 0px, rgba(156, 199, 253, .4) 0px 3px 1px -2px
+  transform: translateY(-5px)
+
+.currency__text 
+  font-size: 1.1rem
+  user-select: none
+
+.currency__title
+  margin-right: 1.25rem
+  font-size: 1rem
+  font-weight: bold
+  color: #75809f
+  @media screen and (max-width: $md)
+    font-size: 0.8rem
+
+.cb-active
+  border: solid 1px #75809f
+  color: #75809f
+  font-weight: bold
+
+.border__line
+  height: 1px
+  border-radius: 0.5px
+  width: 100%
+  margin: 1.875rem 0
+  background-color: #f5f7fc
+
+/* Customize the label (the container) */
+.container 
+  margin-top: 10px
+  @extend .show
+  position: relative
+  padding-left: 35px
+  margin-bottom: 12px
+  width: 25px
+  height: 25px
+  cursor: pointer
+  font-size: 1rem
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.checkbox__text 
+  color: #75809f
+  font-size: 1rem
+  font-weight: bold
+  font-style: normal
+  font-stretch: normal
+  line-height: normal
+  letter-spacing: normal
+  text-align: left
+  @include respond-to(medium)
+    font-size: 0.8rem
+  @include respond-to(handhelds)
+    font-size: 0.8rem
+  
+/* Hide the browser's default checkbox */
+.container input 
+  position: absolute
+  opacity: 0
+  cursor: pointer
+  height: 0
+  width: 0
+
+/* Create a custom checkbox */
+.checkmark 
+  position: absolute
+  top: 0
+  left: 0
+  height: 25px
+  width: 25px
+  border-radius: 3px
+  border: solid 1px $primary-color
+  background-color: $second-color
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark 
+  background-color: $second-color
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after 
+  content: ""
+  position: absolute
+  @extend .hide
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after 
+  @extend .show
+
+/* Style the checkmark/indicator */
+.container .checkmark:after 
+  left: 9px
+  top: 5px
+  width: 5px
+  height: 10px
+  border: solid $primary-color
+  border-width: 0 3px 3px 0
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)
+
+.terms 
+  @extend  .flex_block
+  justify-content: space-between
+
+a
+  color: $link-color
+  a:visited
+    color: $link-color
+ 
+.submit__button
+  @extend .flex_block
+  flex-direction: column
+  justify-content: flex-start
+  margin: 1.875rem 0
+  span 
+    color: #75809f
+  a
+    color: #fff
+    font-weight: bold
+
+.btn
+  text-decoration: none
+  outline: none
+  height: 3.375rem
+  margin-bottom: 1.25rem
+  text-transform: uppercase
+  text-align: center
+  line-height: 3.375rem
+  vertical-align: center
+  letter-spacing: 1px
+  font-weight: 600
+  background: $btn-active
+  color: #000
+  cursor: pointer
+  transition: .3s
+  width: 100%
+  border-radius: 5px
+  @include respond-to(medium)
+    font-size: 1.2rem
+  @include respond-to(handhelds)
+    font-size: 1.2rem
+
+.active_btn
+  background: $btn-active
+  color: #000
+  cursor: pointer
+
+.active_btn:hover
+  // transform: translateY(-5px)
+  background-color: $btn-dis
+  // box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px
+  
+.modal
+  @extend .hide
+
+.open
+  @extend .show
+
+.modal__close 
+  height: 1.25rem
+  width: 1.25rem
+  fill: $primary-color
+  cursor: pointer
+  position: absolute
+  top: 40%
+  right: 5%
+
+.close__container
+  height: 100%
+  position: absolute
+
+.terms__content 
+  width: 100%
+  height: 100%
+  margin-top: 0.3125rem

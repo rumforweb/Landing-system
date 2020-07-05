@@ -1,0 +1,243 @@
+
+
+//colors
+$blue: #2D3EDC;
+$placeholder: #BCDCFF;
+$yellow: #FCEE21;
+$white: #fff;
+$pink: #FF355D;
+$black: #000;
+$shadow: #151821;
+$grey: #dedede;
+$gradient: linear-gradient(180deg, rgba(45, 62, 220, 0) 0%, #2D3EDC 100%);
+
+
+// media
+@mixin phone-xs {
+    @media (max-width: 320px) { @content; }
+}
+@mixin phone-sm {
+    @media (max-width: 375px) { @content; }
+}
+@mixin phone-md {
+    @media (max-width: 425px) { @content; }
+}
+@mixin phone-xl {
+    @media (max-width: 640px) { @content; }
+}
+@mixin pad-xs {
+    @media (max-width: 768px) { @content; }
+}
+@mixin pad-md {
+    @media (max-width: 1279px) { @content; }
+}
+@mixin desctop-xs {
+    @media (max-width: 1366px) { @content; }
+}
+@mixin desctop-sm {
+    @media (max-width: 1440px) { @content; }
+}
+@mixin desctop-md {
+    @media (max-width: 1680px) { @content; }
+}
+@mixin desctop-xl {
+    @media (max-width: 1920px) { @content; }
+}
+
+@import 'form.scss';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: $blue;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.parallax {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    &-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+          background-repeat: no-repeat;
+        background-size: contain;
+        &__1 {
+            background: url(./img/main.jpg) no-repeat;
+            background-size: cover;
+        }
+        &__2 {
+            background: url(./img/layer_2.png) no-repeat;
+            background-size: cover;
+            z-index: 99;
+            width: 50%;
+            right: 0;
+            left: auto;
+            @include pad-md {
+                display: none;
+            }
+        }
+    }
+}
+
+.container {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    @include pad-md {
+        top: 2%;
+    }
+    @include pad-xs {
+        left: auto;
+        right: auto;
+        width: 98%;
+        margin: 0 auto;
+    }
+
+}
+.panel {
+    background: $blue;
+    @include desctop-xl {
+        width: 389px;
+    }
+    @include pad-xs {
+        margin: 0 auto;
+    }
+    @include phone-md {
+        width: 375px;
+        background: #2d3edcd9;
+    }
+    @include phone-sm {
+        width: 320px;
+    }
+    @include phone-xs {
+        width: 290px;
+    }
+}
+.logo {
+    text-align: center;
+    padding: 25px 0;
+    img {
+        height: 35px;
+    }
+}
+.bonus_container {
+    text-align: center;
+    padding: 30px 0 0 0;
+    @include desctop-xs {
+        img {
+            height: 30px;
+        }
+        padding: 15px 0 0 0;
+    }
+}
+.bonus {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 390px;
+    @include desctop-xs {
+        padding: 10px 0;
+    }
+    span {
+        font-size: 21px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $white;
+        @include phone-xs {
+            font-size: 16px;
+        }
+    }
+    .b-1 {
+        padding: 0 5px;
+    }
+}
+.promo {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    padding: 10px 0;
+    @include phone-xs {
+        padding: 5px 0;
+    }
+    .promo_title {
+        font-size: 14px;
+        color: $black;    
+        font-weight: bold;
+        background: $blue;
+        z-index: 2;
+        width: 154px;
+        margin: 0 auto;
+        @include phone-md {
+            background: #3e4cd1;
+        }
+    }
+    .promo_code {
+        font-size: 26px;
+        width: 160px;
+        margin: 0 auto;
+        padding: 5px;
+        color: $white;
+        font-weight: lighter;
+        border: 1px solid $black;
+        border-radius: 8px;
+        position: relative;
+        top: -10px;
+        z-index: 1;
+        @include desctop-xs {
+            font-size: 23px;
+            top:-8px;
+        }
+    }   
+}
+
+.steps {
+    ul {
+        list-style: none;
+        padding: 0;
+        text-transform: uppercase;
+        text-align: start;
+        width: 290px;
+        margin: 0 auto;
+        line-height: 1.5;
+        @include phone-xs {
+            width: 270px;
+        }
+        li {
+            .mark {
+                color: $yellow;
+                font-size: 18px;
+                padding: 0 8px;
+                @include phone-xs {
+                    font-size: 14px;
+                }
+            }
+            .step {
+                color: $white;
+                font-size: 16px;
+                @include phone-xs {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    padding: 30px 0;
+}

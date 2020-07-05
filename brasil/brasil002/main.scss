@@ -1,0 +1,180 @@
+// colors
+$yellow: #FCEE21;
+$blue: #0730C4;
+$black: #000;
+$white: #fff;
+$gray: #CECECE;
+$yel-op: #fcee1fc7;
+
+// media
+@mixin phone-xs {
+    @media (max-width: 320px) { @content; }
+}
+@mixin phone-sm {
+    @media (max-width: 380px) { @content; }
+}
+@mixin phone-md {
+    @media (max-width: 425px) { @content; }
+}
+@mixin phone-xl {
+    @media (max-width: 640px) { @content; }
+}
+@mixin pad-xs {
+    @media (max-width: 768px) { @content; }
+}
+@mixin pad-md {
+    @media (max-width: 966px) { @content; }
+}
+@mixin pad-xl {
+    @media (max-width: 1170px) { @content; }
+}
+
+
+body {
+    background: url(./img/main.jpg) no-repeat;
+    background-size: cover;
+    background-position: 30%;
+    height: 100vh;
+    margin: 0;
+    @include pad-xl {
+        background-position: 50%;
+    }
+    @include phone-md {
+        background-position: 61%;
+    }
+}
+.container {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: 0 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    @include phone-xl {
+        margin: 0;
+        text-align: center;
+    }
+}
+.target {
+    color: $black;
+    font-size: 60px;
+    text-transform: uppercase;
+    width: 603px;
+    @include pad-xs {
+        font-size: 44px;
+    }
+    @include phone-xl {
+        width: 100%;
+        background: $yel-op;
+        padding: 20px 0px;
+    }
+    @include phone-xs {
+        font-size: 26px;
+    }
+}
+.go {
+    a {
+        display: inline-block;
+        background: $yellow;
+        color: $black;
+        font-size: 26px;
+        text-decoration: none;
+        padding: 16px 35px;
+        border-radius: 9px;
+        text-transform: uppercase;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.28);
+    }
+}
+.bootom_wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.bottom {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 60%;
+    border-bottom: 1px solid $black;
+    padding-bottom: 10px;
+    @include pad-xl {
+        width: 70%;
+    }
+    @include phone-xl {
+        margin: 0 auto;
+    }
+    @include phone-xs{
+        align-items: center;
+    }
+    .cp {
+        color: $gray;
+        text-transform: uppercase;
+        width: 192px;
+        @include phone-xs {
+            text-align: initial;
+        }
+    }
+    .games {
+        @include pad-xl {
+            width: 35%;
+        }
+        @include pad-xs {
+            width: 50%;
+        }
+    
+        @include phone-xl {
+            width: 40%;
+        }
+    }
+}
+.accept {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 60%;
+    justify-content: stretch;
+    padding-top: 20px;
+    img {
+        height: 20px;
+        padding: 10px 20px;
+        @include phone-xl{
+            height: 14px;
+        }
+        @include phone-xs {
+            padding: 6px 13px;
+        }
+    }
+    @include pad-xl {
+        width: 75%;
+    }
+    @include phone-xl {
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+footer {
+    background: $blue;
+    .wrap{
+        width: 690px;
+        margin: 0 auto;
+        @include phone-xl {
+            width: 400px;
+        }
+        @include phone-sm {
+            width: 300px;
+        }
+        p {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            color: $white;
+            font-size: 14px;
+            padding: 20px 15px;
+            margin: 0;
+            @include phone-sm {
+                font-size: 10px;
+            }
+        }
+    }
+}

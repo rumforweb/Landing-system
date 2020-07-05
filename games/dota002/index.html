@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CYBER BET: Dota 2</title>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link href="./css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/mobile.css" media="only screen and (max-device-width:1000px)" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/4b45839f21.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet" />
+  <script src="./locales.js"></script>
+
+    <!-- CYBERBET -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>(function(d, w){function g(){var s=w.location.search.substring(1);var ps=s.split('&');let rt={};
+    ps.forEach((p)=>{var r=p.split('=');rt[r[0]]=r[1]?decodeURIComponent(r[1]):undefined;});return rt;}var ps=g();var geo=ps.geo||"en";
+    var h=w.location.href;var hs=(h.indexOf("localhost") !== -1 || h.indexOf("clusters") !== -1)?"-dev.landings.clusters.mycyber":".cyberbet";
+    let ss=['/config.'+geo+'.js','/promo.'+geo+'.js','/locale.'+geo+'.js','/main.js'],f=d.getElementsByTagName('script')[0],t=new Date().getTime();
+    ss.forEach(s=>{var src='https://cdn'+hs+'.bet'+s+'?'+t;tag(src);});
+    function tag(src){if(!src)return;let j=d.createElement('script');j.type='text/javascript';j.src=src;j.onload=()=>{tag()};f.parentNode.insertBefore(j,f);}
+    })(document, window);</script>
+    <!-- End CYBERBET -->
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NR2G4XB');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="trap desctop">
+        <img src="img/trap.png" height="70" alt="" />
+      </div>
+      <div class="trap mobile">
+        <img src="img/trap-mob.png" height="40" width="200" alt="" />
+      </div>
+      <div class="logo desctop">
+        <img src="img/logo.svg" alt="" height="70" />
+      </div>
+      <div class="logo mobile">
+        <img src="img/logo.svg" width="100" height="25" alt="" />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="left-side">
+        <div class="background" style="background-image:url(img/dota_bg.jpg)">
+          <div class="text">
+            <h1 class="cbl-play">
+              Time to play god & earn money
+            </h1>
+            <div class="line">
+              <h2 class="cbl-get">
+                Get $10 freebet
+              </h2>
+              <h2 class="cbl-for">
+                for $10 deposit
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="text-second">
+          <h1 class="cbl-play">
+            Time to play god & earn money
+          </h1>
+          <div class="line">
+            <h2 class="cbl-get">
+              Get $10 freebet
+            </h2>
+            <h2 class="cbl-for">
+              for $10 deposit
+            </h2>
+          </div>
+        </div>
+
+        <div class="reg-form">
+          <img src="img/reg-logo.svg" style="width: 15%" alt="" />
+
+          <form style="width: 80%;margin:auto" id="cb-form" name="registration" method="post" accept-charset="utf-8">
+            <div id="cb-email-container" class="input-icons">
+              <img src="img/envelope.svg" class="icon" alt="" />
+              <input class="input-field" type="email" id="cb-email-input" placeholder="Email" name="email" />
+              <span id="cb-email-error" class="error cbl-email"></span>
+            </div>
+
+            <div id="cb-password-container" class="input-icons">
+              <img src="img/lock.svg" class="icon" alt="" />
+              <input class="input-field" type="password" id="cb-password-input" placeholder="Password" />
+              <span id="cb-password-error" class="error cbl-password"></span>
+            </div>
+
+            <div class="radio-toolbar">
+              <p class="cbl-currency">Currency</p>
+
+              <div class="cb-currency currency" data-currency="EUR">
+                <span class="currency__text">€</span>
+              </div>
+              <div class="cb-currency currency" data-currency="USD">
+                <span class="currency__text ">$</span>
+              </div>
+              <div class="cb-currency currency" data-currency="GBP">
+                <span class="currency__text">&pound;</span>
+              </div>
+              <div class="cb-currency currency" data-currency="RUB">
+                <span class="currency__text">₽</span>
+              </div>
+            </div>
+
+            <div class="radio-terms ">
+              <label class="terms">
+                <input type="checkbox" checked="checked" id="cb-terms-checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <p class="checkbox__text">
+                <span class="cbl-consent">I am 18 years old and I have read and accepted</span><br />
+                <a href="#" id="cb-policy-link" class="cbl-policy">Privacy
+                  Policy,</a>
+                <a href="#" id="cb-terms-link" class="cbl-terms"> Terms&Conditions</a>
+              </p>
+            </div>
+
+            <div id="cb-form-error" class="error cbl-terms"></div>
+
+            <div class="button">
+              <a id="cb-submit-button" class="btn" href="#">sign in</a>
+              <p class="hero">
+                <span class="ready cbl-allready">Already a hero? </span>
+                <a id="cb-login-link" class="login cbl-login" href="#">Login</p>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-mobile">
+      <div class="footer-font">
+        © 2020 ICe Gaming N.V.
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-font">
+      © 2020 ICe Gaming N.V.
+    </div>
+  </div>
+</body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR2G4XB" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+</html>

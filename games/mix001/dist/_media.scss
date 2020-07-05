@@ -1,0 +1,39 @@
+@mixin for-phone-5-older {
+    @media (max-width: 320px) { @content; }
+}
+// iPhone X
+@mixin for-phone-small {
+    @media (max-width: 375px) { @content; }
+}
+// iPhone XR/11
+@mixin for-phone-only {
+    @media (max-width: 414px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+    @media (max-width: 640px) { @content; }
+}
+// iPad
+@mixin for-tablet {
+    @media (max-width: 768px) { @content; }
+}
+@mixin for-tablet-lanscape {
+    @media (max-width: 896px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+    @media (max-width: 991px) { @content; }
+}
+// ipad Pro
+@mixin for-desktop-old {
+    @media (max-width: 1366px) { @content; }
+}
+@mixin for-desktop-up {
+    @media (max-width: 1440px) { @content; }
+}
+@mixin for-big-desktop-up {
+    @media (max-width: 1800px) { @content; }
+}
+
+
+
+
+
